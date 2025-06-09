@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TNAI-Proj")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0294545875fd2965fe3c47e03348cc13165d4f0f")]
 [assembly: System.Reflection.AssemblyProductAttribute("TNAI-Proj")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TNAI-Proj")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

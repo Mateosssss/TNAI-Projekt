@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using System;
+using TNAI_Proj.Models;
 
 public class ApplicationDbContext : DbContext
 {

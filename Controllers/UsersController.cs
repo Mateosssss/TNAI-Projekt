@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
 using System.Text;
+using TNAI_Proj.Models;
 
 [ApiController]
 [Route("api/[controller]")]

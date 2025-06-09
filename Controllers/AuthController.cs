@@ -1,198 +1,172 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.IdentityModel.Tokens;
-using System;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
 using System.Threading.Tasks;
-using System.Security.Cryptography;
+using TNAI_Proj.Models;
+using TNAI_Proj.Models.Auth;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
-[ApiController]
-[Route("api/[controller]")]
-public class AuthController : ControllerBase
+namespace TNAI_Proj.Controllers
 {
-    private readonly ApplicationDbContext _context;
-    private readonly IConfiguration _configuration;
-
-    public AuthController(ApplicationDbContext context, IConfiguration configuration)
+    public class AuthController : Controller
     {
-        _context = context;
-        _configuration = configuration;
-    }
+        private readonly ApplicationDbContext _context;
 
-    [HttpPost("register")]
-    public async Task<ActionResult<User>> Register(RegisterModel model)
-    {
-        if (await _context.Users.AnyAsync(u => u.Email == model.Email))
+        public AuthController(ApplicationDbContext context)
         {
-            return BadRequest("Email already exists");
+            _context = context;
         }
 
-        var user = new User
+        // GET: Auth/Login
+        public IActionResult Login()
         {
-            Name = model.Name,
-            Email = model.Email,
-            PasswordHash = HashPassword(model.Password),
-            Role = "User",
-            CreatedAt = DateTime.UtcNow
-        };
-
-        _context.Users.Add(user);
-        await _context.SaveChangesAsync();
-
-        var token = GenerateJwtToken(user);
-        var refreshToken = GenerateRefreshToken();
-
-        // Save refresh token
-        user.RefreshToken = refreshToken;
-        user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7);
-        await _context.SaveChangesAsync();
-
-        return Ok(new
-        {
-            Token = token,
-            RefreshToken = refreshToken,
-            User = new
+            if (User.Identity.IsAuthenticated)
             {
-                user.Id,
-                user.Name,
-                user.Email,
-                user.Role
+                return RedirectToAction("Index", "Home");
             }
-        });
-    }
-
-    [HttpPost("login")]
-    public async Task<ActionResult> Login(LoginModel model)
-    {
-        var user = await _context.Users
-            .FirstOrDefaultAsync(u => u.Email == model.Email);
-
-        if (user == null || user.PasswordHash != HashPassword(model.Password))
-        {
-            return Unauthorized("Invalid email or password");
+            return View();
         }
 
-        var token = GenerateJwtToken(user);
-        var refreshToken = GenerateRefreshToken();
-
-        // Save refresh token
-        user.RefreshToken = refreshToken;
-        user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7);
-        await _context.SaveChangesAsync();
-
-        return Ok(new
+        // POST: Auth/Login
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login(LoginModel model)
         {
-            Token = token,
-            RefreshToken = refreshToken,
-            User = new
+            if (ModelState.IsValid)
             {
-                user.Id,
-                user.Name,
-                user.Email,
-                user.Role
+                var user = await _context.Users
+                    .FirstOrDefaultAsync(u => u.Email == model.Email);
+
+                if (user != null)
+                {
+                    bool passwordValid = false;
+                    try
+                    {
+                        passwordValid = BCrypt.Net.BCrypt.Verify(model.Password, user.PasswordHash);
+                    }
+                    catch (BCrypt.Net.SaltParseException)
+                    {
+                        // If BCrypt verification fails due to invalid salt, try SHA256
+                        using (var sha256 = System.Security.Cryptography.SHA256.Create())
+                        {
+                            var hashedBytes = sha256.ComputeHash(System.Text.Encoding.UTF8.GetBytes(model.Password));
+                            var hashedPassword = Convert.ToBase64String(hashedBytes);
+                            passwordValid = user.PasswordHash == hashedPassword;
+                        }
+                    }
+
+                    if (passwordValid)
+                    {
+                        var claims = new List<Claim>
+                        {
+                            new Claim(ClaimTypes.Name, user.Name),
+                            new Claim(ClaimTypes.Email, user.Email),
+                            new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                            new Claim(ClaimTypes.Role, user.Role)
+                        };
+
+                        var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                        var authProperties = new AuthenticationProperties
+                        {
+                            IsPersistent = model.RememberMe
+                        };
+
+                        await HttpContext.SignInAsync(
+                            CookieAuthenticationDefaults.AuthenticationScheme,
+                            new ClaimsPrincipal(claimsIdentity),
+                            authProperties);
+
+                        // Redirect admin users to admin dashboard
+                        if (user.Role == "Admin")
+                        {
+                            return RedirectToAction("Dashboard", "Admin");
+                        }
+
+                        return RedirectToAction("Index", "Home");
+                    }
+                }
+
+                ModelState.AddModelError(string.Empty, "Invalid login attempt.");
             }
-        });
-    }
 
-    [HttpPost("refresh-token")]
-    public async Task<ActionResult> RefreshToken(RefreshTokenModel model)
-    {
-        var user = await _context.Users
-            .FirstOrDefaultAsync(u => u.RefreshToken == model.RefreshToken);
-
-        if (user == null || user.RefreshTokenExpiryTime <= DateTime.UtcNow)
-        {
-            return Unauthorized("Invalid refresh token");
+            return View(model);
         }
 
-        var token = GenerateJwtToken(user);
-        var refreshToken = GenerateRefreshToken();
-
-        // Save new refresh token
-        user.RefreshToken = refreshToken;
-        user.RefreshTokenExpiryTime = DateTime.UtcNow.AddDays(7);
-        await _context.SaveChangesAsync();
-
-        return Ok(new
+        // GET: Auth/Register
+        public IActionResult Register()
         {
-            Token = token,
-            RefreshToken = refreshToken
-        });
-    }
-
-    [HttpPost("logout")]
-    public async Task<ActionResult> Logout(int userId)
-    {
-        var user = await _context.Users.FindAsync(userId);
-        if (user == null)
-        {
-            return NotFound();
-        }
-
-        user.RefreshToken = null;
-        user.RefreshTokenExpiryTime = null;
-        await _context.SaveChangesAsync();
-
-        return Ok();
-    }
-
-    private string GenerateJwtToken(User user)
-    {
-        var tokenHandler = new JwtSecurityTokenHandler();
-        var key = Encoding.ASCII.GetBytes(_configuration["Jwt:Key"]);
-        var tokenDescriptor = new SecurityTokenDescriptor
-        {
-            Subject = new ClaimsIdentity(new[]
+            if (User.Identity.IsAuthenticated)
             {
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                return RedirectToAction("Index", "Home");
+            }
+            return View();
+        }
+
+        // POST: Auth/Register
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Register(RegisterModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                // Check if email already exists
+                if (await _context.Users.AnyAsync(u => u.Email == model.Email))
+                {
+                    ModelState.AddModelError("Email", "Email already in use.");
+                    return View(model);
+                }
+
+                // Create new user
+                var user = new User
+                {
+                    Name = model.Name,
+                    Email = model.Email,
+                    PasswordHash = BCrypt.Net.BCrypt.HashPassword(model.Password),
+                    Role = "User", // Set default role
+                    CreatedAt = DateTime.UtcNow // Set creation date
+                };
+
+                _context.Users.Add(user);
+                await _context.SaveChangesAsync();
+
+                // Auto-login after registration
+                await SignInUser(user);
+
+                return RedirectToAction("Index", "Home");
+            }
+
+            return View(model);
+        }
+
+        // POST: Auth/Logout
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToAction("Index", "Home");
+        }
+
+        // GET: Auth/AccessDenied
+        public IActionResult AccessDenied()
+        {
+            return View();
+        }
+
+        private async Task SignInUser(User user)
+        {
+            var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Name, user.Name),
                 new Claim(ClaimTypes.Email, user.Email),
-                new Claim(ClaimTypes.Role, user.Role)
-            }),
-            Expires = DateTime.UtcNow.AddHours(1),
-            SigningCredentials = new SigningCredentials(
-                new SymmetricSecurityKey(key),
-                SecurityAlgorithms.HmacSha256Signature)
-        };
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
+            };
 
-        var token = tokenHandler.CreateToken(tokenDescriptor);
-        return tokenHandler.WriteToken(token);
-    }
-
-    private string GenerateRefreshToken()
-    {
-        var randomNumber = new byte[32];
-        using var rng = RandomNumberGenerator.Create();
-        rng.GetBytes(randomNumber);
-        return Convert.ToBase64String(randomNumber);
-    }
-
-    private string HashPassword(string password)
-    {
-        using (var sha256 = SHA256.Create())
-        {
-            var hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-            return Convert.ToBase64String(hashedBytes);
+            var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+            await HttpContext.SignInAsync(
+                CookieAuthenticationDefaults.AuthenticationScheme,
+                new ClaimsPrincipal(claimsIdentity));
         }
     }
-}
-
-public class RegisterModel
-{
-    public string Name { get; set; }
-    public string Email { get; set; }
-    public string Password { get; set; }
-}
-
-public class LoginModel
-{
-    public string Email { get; set; }
-    public string Password { get; set; }
-}
-
-public class RefreshTokenModel
-{
-    public string RefreshToken { get; set; }
 } 

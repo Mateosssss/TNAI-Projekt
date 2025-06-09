@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using TNAI_Proj.Models;
+using BCrypt.Net;
 
 namespace TNAI_Proj.Data
 {
@@ -48,8 +49,26 @@ namespace TNAI_Proj.Data
                 // Seed Users
                 var users = new List<User>
                 {
-                    new User { Name = "Admin", Email = "admin@example.com", PasswordHash = "admin123", PhoneNumber = "555-9999", Address = "789 Pine St", Role = "Admin", RefreshToken = "default-refresh-token", CreatedAt = DateTime.UtcNow },
-                    new User { Name = "User", Email = "user@example.com", PasswordHash = "user123", PhoneNumber = "555-8888", Address = "101 Elm St", Role = "User", RefreshToken = "default-refresh-token", CreatedAt = DateTime.UtcNow }
+                    new User { 
+                        Name = "Admin", 
+                        Email = "admin@example.com", 
+                        PasswordHash = BCrypt.Net.BCrypt.HashPassword("admin123"), 
+                        PhoneNumber = "555-9999", 
+                        Address = "789 Pine St", 
+                        Role = "Admin", 
+                        RefreshToken = "default-refresh-token", 
+                        CreatedAt = DateTime.UtcNow 
+                    },
+                    new User { 
+                        Name = "User", 
+                        Email = "user@example.com", 
+                        PasswordHash = BCrypt.Net.BCrypt.HashPassword("user123"), 
+                        PhoneNumber = "555-8888", 
+                        Address = "101 Elm St", 
+                        Role = "User", 
+                        RefreshToken = "default-refresh-token", 
+                        CreatedAt = DateTime.UtcNow 
+                    }
                 };
                 context.Users.AddRange(users);
                 context.SaveChanges();
@@ -62,6 +81,8 @@ namespace TNAI_Proj.Data
                         Name = "Toyota Camry",
                         Description = "Reliable and fuel-efficient sedan",
                         Price = 25000.00M,
+                        Year = 2023,
+                        Mileage = 15000.00M,
                         Horsepower = 203,
                         Torque = 184,
                         TopSpeed = 135,
@@ -80,6 +101,8 @@ namespace TNAI_Proj.Data
                         Name = "Honda CR-V",
                         Description = "Spacious and practical SUV",
                         Price = 30000.00M,
+                        Year = 2023,
+                        Mileage = 12000.00M,
                         Horsepower = 190,
                         Torque = 179,
                         TopSpeed = 125,
@@ -98,6 +121,8 @@ namespace TNAI_Proj.Data
                         Name = "Porsche 911",
                         Description = "High-performance sports car",
                         Price = 100000.00M,
+                        Year = 2023,
+                        Mileage = 5000.00M,
                         Horsepower = 379,
                         Torque = 331,
                         TopSpeed = 182,

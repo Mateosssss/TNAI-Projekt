@@ -21,7 +21,7 @@ namespace TNAI_Proj.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Car", b =>
+            modelBuilder.Entity("TNAI_Proj.Models.Car", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -59,11 +59,13 @@ namespace TNAI_Proj.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("ImagePath")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsAvailable")
                         .HasColumnType("bit");
+
+                    b.Property<decimal>("Mileage")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -92,6 +94,9 @@ namespace TNAI_Proj.Migrations
                     b.Property<int?>("UserId")
                         .HasColumnType("int");
 
+                    b.Property<int>("Year")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
@@ -103,7 +108,7 @@ namespace TNAI_Proj.Migrations
                     b.ToTable("Cars");
                 });
 
-            modelBuilder.Entity("Category", b =>
+            modelBuilder.Entity("TNAI_Proj.Models.Category", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -134,7 +139,7 @@ namespace TNAI_Proj.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("Dealership", b =>
+            modelBuilder.Entity("TNAI_Proj.Models.Dealership", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -151,7 +156,6 @@ namespace TNAI_Proj.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
@@ -159,7 +163,6 @@ namespace TNAI_Proj.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("ManagerName")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
@@ -169,7 +172,6 @@ namespace TNAI_Proj.Migrations
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("OperatingHours")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")
@@ -185,7 +187,7 @@ namespace TNAI_Proj.Migrations
                     b.ToTable("Dealerships");
                 });
 
-            modelBuilder.Entity("MaintenanceRecord", b =>
+            modelBuilder.Entity("TNAI_Proj.Models.MaintenanceRecord", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -218,7 +220,6 @@ namespace TNAI_Proj.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ServiceProvider")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
@@ -237,7 +238,7 @@ namespace TNAI_Proj.Migrations
                     b.ToTable("MaintenanceRecords");
                 });
 
-            modelBuilder.Entity("Order", b =>
+            modelBuilder.Entity("TNAI_Proj.Models.Order", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -252,7 +253,6 @@ namespace TNAI_Proj.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Notes")
-                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
@@ -260,7 +260,6 @@ namespace TNAI_Proj.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("PaymentMethod")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
@@ -273,7 +272,6 @@ namespace TNAI_Proj.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("TransactionId")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
@@ -289,7 +287,7 @@ namespace TNAI_Proj.Migrations
                     b.ToTable("Orders");
                 });
 
-            modelBuilder.Entity("Review", b =>
+            modelBuilder.Entity("TNAI_Proj.Models.Review", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -329,7 +327,7 @@ namespace TNAI_Proj.Migrations
                     b.ToTable("Reviews");
                 });
 
-            modelBuilder.Entity("User", b =>
+            modelBuilder.Entity("TNAI_Proj.Models.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -338,7 +336,6 @@ namespace TNAI_Proj.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Address")
-                        .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
@@ -360,12 +357,10 @@ namespace TNAI_Proj.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")
-                        .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("RefreshToken")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("RefreshTokenExpiryTime")
@@ -386,20 +381,20 @@ namespace TNAI_Proj.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("Car", b =>
+            modelBuilder.Entity("TNAI_Proj.Models.Car", b =>
                 {
-                    b.HasOne("Category", "Category")
+                    b.HasOne("TNAI_Proj.Models.Category", "Category")
                         .WithMany("Cars")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("Dealership", "Dealership")
+                    b.HasOne("TNAI_Proj.Models.Dealership", "Dealership")
                         .WithMany("Cars")
                         .HasForeignKey("DealershipId")
                         .OnDelete(DeleteBehavior.SetNull);
 
-                    b.HasOne("User", "User")
+                    b.HasOne("TNAI_Proj.Models.User", "User")
                         .WithMany("BoughtCars")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.SetNull);
@@ -411,9 +406,9 @@ namespace TNAI_Proj.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("MaintenanceRecord", b =>
+            modelBuilder.Entity("TNAI_Proj.Models.MaintenanceRecord", b =>
                 {
-                    b.HasOne("Car", "Car")
+                    b.HasOne("TNAI_Proj.Models.Car", "Car")
                         .WithMany("MaintenanceRecords")
                         .HasForeignKey("CarId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -422,15 +417,15 @@ namespace TNAI_Proj.Migrations
                     b.Navigation("Car");
                 });
 
-            modelBuilder.Entity("Order", b =>
+            modelBuilder.Entity("TNAI_Proj.Models.Order", b =>
                 {
-                    b.HasOne("Car", "Car")
+                    b.HasOne("TNAI_Proj.Models.Car", "Car")
                         .WithMany("Orders")
                         .HasForeignKey("CarId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("User", "User")
+                    b.HasOne("TNAI_Proj.Models.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -441,15 +436,15 @@ namespace TNAI_Proj.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Review", b =>
+            modelBuilder.Entity("TNAI_Proj.Models.Review", b =>
                 {
-                    b.HasOne("Car", "Car")
+                    b.HasOne("TNAI_Proj.Models.Car", "Car")
                         .WithMany("Reviews")
                         .HasForeignKey("CarId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("User", "User")
+                    b.HasOne("TNAI_Proj.Models.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -460,7 +455,7 @@ namespace TNAI_Proj.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Car", b =>
+            modelBuilder.Entity("TNAI_Proj.Models.Car", b =>
                 {
                     b.Navigation("MaintenanceRecords");
 
@@ -469,17 +464,17 @@ namespace TNAI_Proj.Migrations
                     b.Navigation("Reviews");
                 });
 
-            modelBuilder.Entity("Category", b =>
+            modelBuilder.Entity("TNAI_Proj.Models.Category", b =>
                 {
                     b.Navigation("Cars");
                 });
 
-            modelBuilder.Entity("Dealership", b =>
+            modelBuilder.Entity("TNAI_Proj.Models.Dealership", b =>
                 {
                     b.Navigation("Cars");
                 });
 
-            modelBuilder.Entity("User", b =>
+            modelBuilder.Entity("TNAI_Proj.Models.User", b =>
                 {
                     b.Navigation("BoughtCars");
                 });

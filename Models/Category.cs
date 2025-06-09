@@ -1,22 +1,25 @@
-using System;
-using System.ComponentModel.DataAnnotations;
-using System.Collections.Generic;
-
-public class Category
+namespace TNAI_Proj.Models
 {
-    public int Id { get; set; }
+    using System;
+    using System.ComponentModel.DataAnnotations;
+    using System.Collections.Generic;
 
-    [Required]
-    [StringLength(50)]
-    public string Name { get; set; }
+    public class Category
+    {
+        public int Id { get; set; }
 
-    [Required]
-    public string Description { get; set; }
+        [Required]
+        [StringLength(50)]
+        public string? Name { get; set; }
 
-    public int DisplayOrder { get; set; }
+        [Required]
+        public string? Description { get; set; }
 
-    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-    public DateTime? UpdatedAt { get; set; }
+        public int DisplayOrder { get; set; }
 
-    public ICollection<Car> Cars { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime? UpdatedAt { get; set; }
+
+        public ICollection<Car>? Cars { get; set; }
+    }
 }

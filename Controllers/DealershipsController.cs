@@ -3,142 +3,153 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TNAI_Proj.Models;
 
-[ApiController]
-[Route("api/[controller]")]
-public class DealershipsController : ControllerBase
+namespace TNAI_Proj.Controllers
 {
-    private readonly ApplicationDbContext _context;
-
-    public DealershipsController(ApplicationDbContext context)
+    public class DealershipsController : Controller
     {
-        _context = context;
-    }
+        private readonly ApplicationDbContext _context;
 
-    // GET: api/Dealerships
-    [HttpGet]
-    public async Task<ActionResult<IEnumerable<Dealership>>> GetDealerships()
-    {
-        return await _context.Dealerships
-            .Include(d => d.Cars)
-            .Where(d => d.IsActive)
-            .ToListAsync();
-    }
-
-    // GET: api/Dealerships/5
-    [HttpGet("{id}")]
-    public async Task<ActionResult<Dealership>> GetDealership(int id)
-    {
-        var dealership = await _context.Dealerships
-            .Include(d => d.Cars)
-            .FirstOrDefaultAsync(d => d.Id == id);
-
-        if (dealership == null)
+        public DealershipsController(ApplicationDbContext context)
         {
-            return NotFound();
+            _context = context;
         }
 
-        return dealership;
-    }
-
-    // GET: api/Dealerships/5/cars
-    [HttpGet("{id}/cars")]
-    public async Task<ActionResult<IEnumerable<Car>>> GetDealershipCars(int id)
-    {
-        var dealership = await _context.Dealerships
-            .Include(d => d.Cars)
-            .FirstOrDefaultAsync(d => d.Id == id);
-
-        if (dealership == null)
+        // GET: Dealerships
+        public async Task<IActionResult> Index()
         {
-            return NotFound();
+            var dealerships = await _context.Dealerships
+                .Include(d => d.Cars)
+                .ToListAsync();
+            return View(dealerships);
         }
 
-        return dealership.Cars.ToList();
-    }
-
-    // GET: api/Dealerships/5/cars/available
-    [HttpGet("{id}/cars/available")]
-    public async Task<ActionResult<IEnumerable<Car>>> GetDealershipAvailableCars(int id)
-    {
-        var dealership = await _context.Dealerships
-            .Include(d => d.Cars.Where(c => c.IsAvailable))
-            .FirstOrDefaultAsync(d => d.Id == id);
-
-        if (dealership == null)
+        // GET: Dealerships/Details/5
+        public async Task<IActionResult> Details(int? id)
         {
-            return NotFound();
-        }
-
-        return dealership.Cars.ToList();
-    }
-
-    // POST: api/Dealerships
-    [HttpPost]
-    public async Task<ActionResult<Dealership>> CreateDealership(Dealership dealership)
-    {
-        dealership.CreatedAt = System.DateTime.UtcNow;
-        dealership.IsActive = true;
-
-        _context.Dealerships.Add(dealership);
-        await _context.SaveChangesAsync();
-
-        return CreatedAtAction(nameof(GetDealership), new { id = dealership.Id }, dealership);
-    }
-
-    // PUT: api/Dealerships/5
-    [HttpPut("{id}")]
-    public async Task<IActionResult> UpdateDealership(int id, Dealership dealership)
-    {
-        if (id != dealership.Id)
-        {
-            return BadRequest();
-        }
-
-        dealership.UpdatedAt = System.DateTime.UtcNow;
-
-        _context.Entry(dealership).State = EntityState.Modified;
-
-        try
-        {
-            await _context.SaveChangesAsync();
-        }
-        catch (DbUpdateConcurrencyException)
-        {
-            if (!DealershipExists(id))
+            if (id == null)
             {
                 return NotFound();
             }
-            else
+
+            var dealership = await _context.Dealerships
+                .Include(d => d.Cars)
+                .FirstOrDefaultAsync(d => d.Id == id);
+
+            if (dealership == null)
             {
-                throw;
+                return NotFound();
             }
+
+            return View(dealership);
         }
 
-        return NoContent();
-    }
-
-    // DELETE: api/Dealerships/5
-    [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteDealership(int id)
-    {
-        var dealership = await _context.Dealerships.FindAsync(id);
-        if (dealership == null)
+        // GET: Dealerships/Create
+        public IActionResult Create()
         {
-            return NotFound();
+            return View();
         }
 
-        // Soft delete - mark as inactive instead of removing
-        dealership.IsActive = false;
-        dealership.UpdatedAt = System.DateTime.UtcNow;
+        // POST: Dealerships/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(Dealership dealership)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(dealership);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(dealership);
+        }
 
-        await _context.SaveChangesAsync();
+        // GET: Dealerships/Edit/5
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
 
-        return NoContent();
-    }
+            var dealership = await _context.Dealerships.FindAsync(id);
+            if (dealership == null)
+            {
+                return NotFound();
+            }
+            return View(dealership);
+        }
 
-    private bool DealershipExists(int id)
-    {
-        return _context.Dealerships.Any(e => e.Id == id);
+        // POST: Dealerships/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, Dealership dealership)
+        {
+            if (id != dealership.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(dealership);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!DealershipExists(dealership.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            return View(dealership);
+        }
+
+        // GET: Dealerships/Delete/5
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var dealership = await _context.Dealerships
+                .Include(d => d.Cars)
+                .FirstOrDefaultAsync(d => d.Id == id);
+            if (dealership == null)
+            {
+                return NotFound();
+            }
+
+            return View(dealership);
+        }
+
+        // POST: Dealerships/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var dealership = await _context.Dealerships.FindAsync(id);
+            if (dealership != null)
+            {
+                _context.Dealerships.Remove(dealership);
+                await _context.SaveChangesAsync();
+            }
+            return RedirectToAction(nameof(Index));
+        }
+
+        private bool DealershipExists(int id)
+        {
+            return _context.Dealerships.Any(e => e.Id == id);
+        }
     }
 } 

@@ -1,138 +1,234 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using TNAI_Proj.Data;
+using TNAI_Proj.Models;
 
-[ApiController]
-[Route("api/[controller]")]
-public class ReviewsController : ControllerBase
+namespace TNAI_Proj.Controllers
 {
-    private readonly ApplicationDbContext _context;
-
-    public ReviewsController(ApplicationDbContext context)
+    public class ReviewsController : Controller
     {
-        _context = context;
-    }
+        private readonly ApplicationDbContext _context;
 
-    // GET: api/Reviews
-    [HttpGet]
-    public async Task<ActionResult<IEnumerable<Review>>> GetReviews()
-    {
-        return await _context.Reviews
-            .Include(r => r.User)
-            .Include(r => r.Car)
-            .ToListAsync();
-    }
-
-    // GET: api/Reviews/5
-    [HttpGet("{id}")]
-    public async Task<ActionResult<Review>> GetReview(int id)
-    {
-        var review = await _context.Reviews
-            .Include(r => r.User)
-            .Include(r => r.Car)
-            .FirstOrDefaultAsync(r => r.Id == id);
-
-        if (review == null)
+        public ReviewsController(ApplicationDbContext context)
         {
-            return NotFound();
+            _context = context;
         }
 
-        return review;
-    }
-
-    // GET: api/Reviews/car/5
-    [HttpGet("car/{carId}")]
-    public async Task<ActionResult<IEnumerable<Review>>> GetCarReviews(int carId)
-    {
-        return await _context.Reviews
-            .Include(r => r.User)
-            .Where(r => r.CarId == carId)
-            .OrderByDescending(r => r.CreatedAt)
-            .ToListAsync();
-    }
-
-    // GET: api/Reviews/user/5
-    [HttpGet("user/{userId}")]
-    public async Task<ActionResult<IEnumerable<Review>>> GetUserReviews(int userId)
-    {
-        return await _context.Reviews
-            .Include(r => r.Car)
-            .Where(r => r.UserId == userId)
-            .OrderByDescending(r => r.CreatedAt)
-            .ToListAsync();
-    }
-
-    // POST: api/Reviews
-    [HttpPost]
-    public async Task<ActionResult<Review>> CreateReview(Review review)
-    {
-        // Verify if user has purchased the car
-        var hasPurchased = await _context.Orders
-            .AnyAsync(o => o.UserId == review.UserId && 
-                          o.CarId == review.CarId && 
-                          o.Status == "Completed");
-
-        review.IsVerified = hasPurchased;
-        review.CreatedAt = System.DateTime.UtcNow;
-
-        _context.Reviews.Add(review);
-        await _context.SaveChangesAsync();
-
-        return CreatedAtAction(nameof(GetReview), new { id = review.Id }, review);
-    }
-
-    // PUT: api/Reviews/5
-    [HttpPut("{id}")]
-    public async Task<IActionResult> UpdateReview(int id, Review review)
-    {
-        if (id != review.Id)
+        // GET: Reviews
+        public async Task<IActionResult> Index(int? carId)
         {
-            return BadRequest();
-        }
-
-        review.UpdatedAt = System.DateTime.UtcNow;
-
-        _context.Entry(review).State = EntityState.Modified;
-
-        try
-        {
-            await _context.SaveChangesAsync();
-        }
-        catch (DbUpdateConcurrencyException)
-        {
-            if (!ReviewExists(id))
+            if (carId.HasValue)
             {
-                return NotFound();
+                var car = await _context.Cars
+                    .Include(c => c.Category)
+                    .Include(c => c.Reviews)
+                        .ThenInclude(r => r.User)
+                    .FirstOrDefaultAsync(c => c.Id == carId);
+
+                if (car == null)
+                {
+                    return NotFound();
+                }
+
+                return View("CarReviews", car);
             }
             else
             {
-                throw;
+                // Get all reviews for the current user
+                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                if (string.IsNullOrEmpty(userId))
+                {
+                    return RedirectToAction("Login", "Auth");
+                }
+
+                var reviews = await _context.Reviews
+                    .Include(r => r.User)
+                    .Include(r => r.Car)
+                    .Where(r => r.UserId.ToString() == userId)
+                    .OrderByDescending(r => r.CreatedAt)
+                    .ToListAsync();
+
+                return View("MyReviews", reviews);
             }
         }
 
-        return NoContent();
-    }
-
-    // DELETE: api/Reviews/5
-    [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteReview(int id)
-    {
-        var review = await _context.Reviews.FindAsync(id);
-        if (review == null)
+        // GET: Reviews/Details/5
+        public async Task<IActionResult> Details(int? id)
         {
-            return NotFound();
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var review = await _context.Reviews
+                .Include(r => r.User)
+                .Include(r => r.Car)
+                .FirstOrDefaultAsync(r => r.Id == id);
+
+            if (review == null)
+            {
+                return NotFound();
+            }
+
+            return View(review);
         }
 
-        _context.Reviews.Remove(review);
-        await _context.SaveChangesAsync();
+        // GET: Reviews/Create
+        public async Task<IActionResult> Create(int carId)
+        {
+            // Check if user has purchased the car
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userId))
+            {
+                return RedirectToAction("Login", "Auth");
+            }
 
-        return NoContent();
-    }
+            var order = await _context.Orders
+                .FirstOrDefaultAsync(o => o.CarId == carId && 
+                                        o.UserId.ToString() == userId && 
+                                        o.Status == "Completed");
 
-    private bool ReviewExists(int id)
-    {
-        return _context.Reviews.Any(e => e.Id == id);
+            if (order == null)
+            {
+                return NotFound("You can only review cars you have purchased.");
+            }
+
+            // Check if user has already reviewed this car
+            var existingReview = await _context.Reviews
+                .FirstOrDefaultAsync(r => r.CarId == carId && 
+                                        r.UserId.ToString() == userId);
+
+            if (existingReview != null)
+            {
+                return RedirectToAction("Edit", new { id = existingReview.Id });
+            }
+
+            ViewBag.OrderId = order.Id;
+            var review = new Review
+            {
+                CarId = carId,
+                UserId = int.Parse(userId),
+                CreatedAt = DateTime.UtcNow
+            };
+
+            return View(review);
+        }
+
+        // POST: Reviews/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(Review review)
+        {
+            if (ModelState.IsValid)
+            {
+                review.CreatedAt = DateTime.UtcNow;
+                review.IsVerified = false; // Reviews start unverified
+                _context.Add(review);
+                await _context.SaveChangesAsync();
+                return RedirectToAction("Details", "Orders", new { id = ViewBag.OrderId });
+            }
+            return View(review);
+        }
+
+        // GET: Reviews/Edit/5
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var review = await _context.Reviews.FindAsync(id);
+            if (review == null)
+            {
+                return NotFound();
+            }
+
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (review.UserId.ToString() != userId)
+            {
+                return Forbid();
+            }
+
+            return View(review);
+        }
+
+        // POST: Reviews/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, Review review)
+        {
+            if (id != review.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    review.UpdatedAt = DateTime.UtcNow;
+                    _context.Update(review);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!ReviewExists(review.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction("Details", "Orders", new { id = ViewBag.OrderId });
+            }
+            return View(review);
+        }
+
+        // GET: Reviews/Delete/5
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var review = await _context.Reviews
+                .Include(r => r.User)
+                .Include(r => r.Car)
+                .FirstOrDefaultAsync(r => r.Id == id);
+            if (review == null)
+            {
+                return NotFound();
+            }
+
+            return View(review);
+        }
+
+        // POST: Reviews/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var review = await _context.Reviews.FindAsync(id);
+            if (review != null)
+            {
+                _context.Reviews.Remove(review);
+                await _context.SaveChangesAsync();
+            }
+            return RedirectToAction(nameof(Index));
+        }
+
+        private bool ReviewExists(int id)
+        {
+            return _context.Reviews.Any(e => e.Id == id);
+        }
     }
 } 

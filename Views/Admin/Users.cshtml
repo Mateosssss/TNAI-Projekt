@@ -1,0 +1,54 @@
+@model IEnumerable<TNAI_Proj.Models.User>
+
+@{
+    ViewData["Title"] = "Manage Users";
+}
+
+<div class="container mt-4">
+    <h1 class="mb-4">Manage Users</h1>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <th>Created At</th>
+                    <th>Bought Cars</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Model)
+                {
+                    <tr>
+                        <td>@user.Id</td>
+                        <td>@user.Name</td>
+                        <td>@user.Email</td>
+                        <td>
+                            <span class="badge @(user.Role == "Admin" ? "bg-danger" : "bg-primary")">
+                                @user.Role
+                            </span>
+                        </td>
+                        <td>@user.PhoneNumber</td>
+                        <td>@user.Address</td>
+                        <td>@user.CreatedAt.ToString("g")</td>
+                        <td>
+                            @if (user.BoughtCars != null && user.BoughtCars.Any())
+                            {
+                                <span class="badge bg-success">@user.BoughtCars.Count</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-secondary">0</span>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div> 

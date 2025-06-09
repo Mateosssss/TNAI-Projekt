@@ -1,0 +1,40 @@
+@model IEnumerable<TNAI_Proj.Models.Car>
+
+@{
+    ViewData["Title"] = "Cars";
+}
+
+<div class="container">
+    <h1 class="mb-4">Available Cars</h1>
+
+    <div class="row">
+        @foreach (var car in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    @if (!string.IsNullOrEmpty(car.ImagePath))
+                    {
+                        <img src="@car.ImagePath" class="card-img-top" alt="@car.Name" style="height: 200px; object-fit: cover;">
+                    }
+                    else
+                    {
+                        <img src="~/images/default-car.jpg" class="card-img-top" alt="Default Car Image" style="height: 200px; object-fit: cover;">
+                    }
+                    <div class="card-body">
+                        <h5 class="card-title">@car.Name</h5>
+                        <p class="card-text">@car.Description</p>
+                        <ul class="list-unstyled">
+                            <li><strong>Price:</strong> $@car.Price.ToString("N2")</li>
+                            <li><strong>Category:</strong> @car.Category?.Name</li>
+                            <li><strong>Dealership:</strong> @car.Dealership?.Name</li>
+                            <li><strong>Status:</strong> @(car.IsAvailable ? "Available" : "Sold")</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a asp-action="Details" asp-route-id="@car.Id" class="btn btn-primary">View Details</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div> 

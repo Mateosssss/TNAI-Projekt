@@ -3,136 +3,157 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TNAI_Proj.Models;
 
-[ApiController]
-[Route("api/[controller]")]
-public class MaintenanceRecordsController : ControllerBase
+namespace TNAI_Proj.Controllers
 {
-    private readonly ApplicationDbContext _context;
-
-    public MaintenanceRecordsController(ApplicationDbContext context)
+    public class MaintenanceRecordsController : Controller
     {
-        _context = context;
-    }
+        private readonly ApplicationDbContext _context;
 
-    // GET: api/MaintenanceRecords
-    [HttpGet]
-    public async Task<ActionResult<IEnumerable<MaintenanceRecord>>> GetMaintenanceRecords()
-    {
-        return await _context.MaintenanceRecords
-            .Include(m => m.Car)
-            .OrderByDescending(m => m.MaintenanceDate)
-            .ToListAsync();
-    }
-
-    // GET: api/MaintenanceRecords/5
-    [HttpGet("{id}")]
-    public async Task<ActionResult<MaintenanceRecord>> GetMaintenanceRecord(int id)
-    {
-        var maintenanceRecord = await _context.MaintenanceRecords
-            .Include(m => m.Car)
-            .FirstOrDefaultAsync(m => m.Id == id);
-
-        if (maintenanceRecord == null)
+        public MaintenanceRecordsController(ApplicationDbContext context)
         {
-            return NotFound();
+            _context = context;
         }
 
-        return maintenanceRecord;
-    }
-
-    // GET: api/MaintenanceRecords/car/5
-    [HttpGet("car/{carId}")]
-    public async Task<ActionResult<IEnumerable<MaintenanceRecord>>> GetCarMaintenanceRecords(int carId)
-    {
-        return await _context.MaintenanceRecords
-            .Where(m => m.CarId == carId)
-            .OrderByDescending(m => m.MaintenanceDate)
-            .ToListAsync();
-    }
-
-    // GET: api/MaintenanceRecords/car/5/summary
-    [HttpGet("car/{carId}/summary")]
-    public async Task<ActionResult<object>> GetCarMaintenanceSummary(int carId)
-    {
-        var records = await _context.MaintenanceRecords
-            .Where(m => m.CarId == carId)
-            .ToListAsync();
-
-        var summary = new
+        // GET: MaintenanceRecords
+        public async Task<IActionResult> Index()
         {
-            TotalCost = records.Sum(r => r.Cost),
-            LastMaintenanceDate = records.Max(r => r.MaintenanceDate),
-            ServiceCount = records.Count,
-            ServiceTypes = records.GroupBy(r => r.ServiceType)
-                .Select(g => new { Type = g.Key, Count = g.Count() })
-        };
-
-        return summary;
-    }
-
-    // POST: api/MaintenanceRecords
-    [HttpPost]
-    public async Task<ActionResult<MaintenanceRecord>> CreateMaintenanceRecord(MaintenanceRecord record)
-    {
-        record.CreatedAt = System.DateTime.UtcNow;
-
-        _context.MaintenanceRecords.Add(record);
-        await _context.SaveChangesAsync();
-
-        return CreatedAtAction(nameof(GetMaintenanceRecord), new { id = record.Id }, record);
-    }
-
-    // PUT: api/MaintenanceRecords/5
-    [HttpPut("{id}")]
-    public async Task<IActionResult> UpdateMaintenanceRecord(int id, MaintenanceRecord record)
-    {
-        if (id != record.Id)
-        {
-            return BadRequest();
+            var maintenanceRecords = await _context.MaintenanceRecords
+                .Include(m => m.Car)
+                .ToListAsync();
+            return View(maintenanceRecords);
         }
 
-        record.UpdatedAt = System.DateTime.UtcNow;
-
-        _context.Entry(record).State = EntityState.Modified;
-
-        try
+        // GET: MaintenanceRecords/Details/5
+        public async Task<IActionResult> Details(int? id)
         {
-            await _context.SaveChangesAsync();
-        }
-        catch (DbUpdateConcurrencyException)
-        {
-            if (!MaintenanceRecordExists(id))
+            if (id == null)
             {
                 return NotFound();
             }
-            else
+
+            var maintenanceRecord = await _context.MaintenanceRecords
+                .Include(m => m.Car)
+                .FirstOrDefaultAsync(m => m.Id == id);
+
+            if (maintenanceRecord == null)
             {
-                throw;
+                return NotFound();
             }
+
+            return View(maintenanceRecord);
         }
 
-        return NoContent();
-    }
-
-    // DELETE: api/MaintenanceRecords/5
-    [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteMaintenanceRecord(int id)
-    {
-        var record = await _context.MaintenanceRecords.FindAsync(id);
-        if (record == null)
+        // GET: MaintenanceRecords/Create
+        public IActionResult Create()
         {
-            return NotFound();
+            ViewBag.Cars = _context.Cars.ToList();
+            return View();
         }
 
-        _context.MaintenanceRecords.Remove(record);
-        await _context.SaveChangesAsync();
+        // POST: MaintenanceRecords/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(MaintenanceRecord maintenanceRecord)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(maintenanceRecord);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            ViewBag.Cars = _context.Cars.ToList();
+            return View(maintenanceRecord);
+        }
 
-        return NoContent();
-    }
+        // GET: MaintenanceRecords/Edit/5
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
 
-    private bool MaintenanceRecordExists(int id)
-    {
-        return _context.MaintenanceRecords.Any(e => e.Id == id);
+            var maintenanceRecord = await _context.MaintenanceRecords.FindAsync(id);
+            if (maintenanceRecord == null)
+            {
+                return NotFound();
+            }
+            ViewBag.Cars = _context.Cars.ToList();
+            return View(maintenanceRecord);
+        }
+
+        // POST: MaintenanceRecords/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, MaintenanceRecord maintenanceRecord)
+        {
+            if (id != maintenanceRecord.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(maintenanceRecord);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!MaintenanceRecordExists(maintenanceRecord.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            ViewBag.Cars = _context.Cars.ToList();
+            return View(maintenanceRecord);
+        }
+
+        // GET: MaintenanceRecords/Delete/5
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var maintenanceRecord = await _context.MaintenanceRecords
+                .Include(m => m.Car)
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (maintenanceRecord == null)
+            {
+                return NotFound();
+            }
+
+            return View(maintenanceRecord);
+        }
+
+        // POST: MaintenanceRecords/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var maintenanceRecord = await _context.MaintenanceRecords.FindAsync(id);
+            if (maintenanceRecord != null)
+            {
+                _context.MaintenanceRecords.Remove(maintenanceRecord);
+                await _context.SaveChangesAsync();
+            }
+            return RedirectToAction(nameof(Index));
+        }
+
+        private bool MaintenanceRecordExists(int id)
+        {
+            return _context.MaintenanceRecords.Any(e => e.Id == id);
+        }
     }
 } 

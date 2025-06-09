@@ -1,0 +1,136 @@
+@model TNAI_Proj.Models.Car
+
+@{
+    ViewData["Title"] = "Car Details";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-6">
+            @if (!string.IsNullOrEmpty(Model.ImagePath))
+            {
+                <img src="@Model.ImagePath" class="img-fluid rounded" alt="@Model.Name">
+            }
+            else
+            {
+                <img src="~/images/default-car.jpg" class="img-fluid rounded" alt="Default Car Image">
+            }
+        </div>
+        <div class="col-md-6">
+            <h2>@Model.Name</h2>
+            <p class="text-muted">@Model.Category?.Name</p>
+            <hr />
+            <div class="mb-4">
+                <h4 class="text-primary">$@Model.Price.ToString("N2")</h4>
+                <p>@Model.Description</p>
+            </div>
+            <div class="row mb-4">
+                <div class="col-6">
+                    <p><strong>Horsepower:</strong> @Model.Horsepower</p>
+                    <p><strong>Torque:</strong> @Model.Torque</p>
+                    <p><strong>Top Speed:</strong> @Model.TopSpeed km/h</p>
+                </div>
+                <div class="col-6">
+                    <p><strong>Acceleration:</strong> @Model.Acceleration s</p>
+                    <p><strong>Fuel Efficiency:</strong> @Model.FuelEfficiency L/100km</p>
+                    <p><strong>Fuel Type:</strong> @Model.FuelType</p>
+                </div>
+            </div>
+            <div class="mb-4">
+                <p><strong>Transmission:</strong> @Model.Transmission</p>
+                <p><strong>Year:</strong> @Model.Year</p>
+                <p><strong>Mileage:</strong> @Model.Mileage km</p>
+            </div>
+            <div class="btn-group" role="group">
+                @if (Model.IsAvailable)
+                {
+                    <a asp-controller="Orders" asp-action="Create" asp-route-carId="@Model.Id" class="btn btn-primary">Purchase Now</a>
+                }
+                else
+                {
+                    <button class="btn btn-secondary" disabled>Not Available</button>
+                }
+                <a asp-controller="Reviews" asp-action="Index" asp-route-carId="@Model.Id" class="btn btn-info">View Reviews</a>
+            </div>
+        </div>
+    </div>
+
+    @if (Model.MaintenanceRecords != null && Model.MaintenanceRecords.Any())
+    {
+        <div class="row mt-4">
+            <div class="col-12">
+                <h2>Maintenance History</h2>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Service Type</th>
+                                <th>Date</th>
+                                <th>Mileage</th>
+                                <th>Cost</th>
+                                <th>Service Provider</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var record in Model.MaintenanceRecords)
+                            {
+                                <tr>
+                                    <td>@record.ServiceType</td>
+                                    <td>@record.MaintenanceDate.ToShortDateString()</td>
+                                    <td>@record.Mileage</td>
+                                    <td>$@record.Cost.ToString("N2")</td>
+                                    <td>@record.ServiceProvider</td>
+                                    <td>@record.Notes</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    }
+
+    <div class="row mt-5">
+        <div class="col-12">
+            <h3>Customer Reviews</h3>
+            <hr />
+            @if (!Model.Reviews.Any())
+            {
+                <p>No reviews yet.</p>
+            }
+            else
+            {
+                foreach (var review in Model.Reviews)
+                {
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title">@review.User?.Name</h5>
+                                <div class="text-warning">
+                                    @for (int i = 1; i <= 5; i++)
+                                    {
+                                        if (i <= review.Rating)
+                                        {
+                                            <i class="fas fa-star"></i>
+                                        }
+                                        else
+                                        {
+                                            <i class="far fa-star"></i>
+                                        }
+                                    }
+                                </div>
+                            </div>
+                            <p class="card-text">@review.Comment</p>
+                            <small class="text-muted">Posted on @review.CreatedAt.ToString("g")</small>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+} 
