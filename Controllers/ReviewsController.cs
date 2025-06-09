@@ -7,54 +7,38 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using TNAI_Proj.Data;
 using TNAI_Proj.Models;
+using Microsoft.Extensions.Logging;
 
 namespace TNAI_Proj.Controllers
 {
     public class ReviewsController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly ILogger<ReviewsController> _logger;
 
-        public ReviewsController(ApplicationDbContext context)
+        public ReviewsController(ApplicationDbContext context, ILogger<ReviewsController> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
         // GET: Reviews
-        public async Task<IActionResult> Index(int? carId)
+        public async Task<IActionResult> Index()
         {
-            if (carId.HasValue)
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userId))
             {
-                var car = await _context.Cars
-                    .Include(c => c.Category)
-                    .Include(c => c.Reviews)
-                        .ThenInclude(r => r.User)
-                    .FirstOrDefaultAsync(c => c.Id == carId);
-
-                if (car == null)
-                {
-                    return NotFound();
-                }
-
-                return View("CarReviews", car);
+                return RedirectToAction("Login", "Auth");
             }
-            else
-            {
-                // Get all reviews for the current user
-                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-                if (string.IsNullOrEmpty(userId))
-                {
-                    return RedirectToAction("Login", "Auth");
-                }
 
-                var reviews = await _context.Reviews
-                    .Include(r => r.User)
-                    .Include(r => r.Car)
-                    .Where(r => r.UserId.ToString() == userId)
-                    .OrderByDescending(r => r.CreatedAt)
-                    .ToListAsync();
+            var reviews = await _context.Reviews
+                .Include(r => r.Car)
+                .Include(r => r.User)
+                .Where(r => r.UserId == int.Parse(userId))
+                .OrderByDescending(r => r.CreatedAt)
+                .ToListAsync();
 
-                return View("MyReviews", reviews);
-            }
+            return View(reviews);
         }
 
         // GET: Reviews/Details/5
@@ -79,59 +63,43 @@ namespace TNAI_Proj.Controllers
         }
 
         // GET: Reviews/Create
-        public async Task<IActionResult> Create(int carId)
+        public IActionResult Create(int carId, int orderId)
         {
-            // Check if user has purchased the car
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            if (string.IsNullOrEmpty(userId))
-            {
-                return RedirectToAction("Login", "Auth");
-            }
-
-            var order = await _context.Orders
-                .FirstOrDefaultAsync(o => o.CarId == carId && 
-                                        o.UserId.ToString() == userId && 
-                                        o.Status == "Completed");
-
-            if (order == null)
-            {
-                return NotFound("You can only review cars you have purchased.");
-            }
-
-            // Check if user has already reviewed this car
-            var existingReview = await _context.Reviews
-                .FirstOrDefaultAsync(r => r.CarId == carId && 
-                                        r.UserId.ToString() == userId);
-
-            if (existingReview != null)
-            {
-                return RedirectToAction("Edit", new { id = existingReview.Id });
-            }
-
-            ViewBag.OrderId = order.Id;
-            var review = new Review
-            {
-                CarId = carId,
-                UserId = int.Parse(userId),
-                CreatedAt = DateTime.UtcNow
-            };
-
+            _logger.LogInformation($"Creating review for car {carId} and order {orderId}");
+            ViewBag.OrderId = orderId;
+            ViewBag.CarId = carId;
+            var review = new Review { CarId = carId };
             return View(review);
         }
 
         // POST: Reviews/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Review review)
+        public async Task<IActionResult> Create(Review review, int orderId)
         {
+            _logger.LogInformation($"Submitting review for car {review.CarId} and order {orderId}");
+            
             if (ModelState.IsValid)
             {
+                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                if (string.IsNullOrEmpty(userId))
+                {
+                    return RedirectToAction("Login", "Auth");
+                }
+
+                review.UserId = int.Parse(userId);
                 review.CreatedAt = DateTime.UtcNow;
-                review.IsVerified = false; // Reviews start unverified
+                review.IsVerified = false;
                 _context.Add(review);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("Details", "Orders", new { id = ViewBag.OrderId });
+                
+                _logger.LogInformation("Review saved successfully, redirecting to Orders/Index");
+                return RedirectToAction("Index", "Orders");
             }
+
+            _logger.LogWarning("Model state invalid, returning to create view");
+            ViewBag.OrderId = orderId;
+            ViewBag.CarId = review.CarId;
             return View(review);
         }
 
@@ -172,9 +140,9 @@ namespace TNAI_Proj.Controllers
             {
                 try
                 {
-                    review.UpdatedAt = DateTime.UtcNow;
                     _context.Update(review);
                     await _context.SaveChangesAsync();
+                    return RedirectToAction("Index", "Orders");
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -187,7 +155,6 @@ namespace TNAI_Proj.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction("Details", "Orders", new { id = ViewBag.OrderId });
             }
             return View(review);
         }
@@ -200,10 +167,17 @@ namespace TNAI_Proj.Controllers
                 return NotFound();
             }
 
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userId))
+            {
+                return RedirectToAction("Login", "Auth");
+            }
+
             var review = await _context.Reviews
-                .Include(r => r.User)
                 .Include(r => r.Car)
-                .FirstOrDefaultAsync(r => r.Id == id);
+                .Include(r => r.User)
+                .FirstOrDefaultAsync(m => m.Id == id && m.UserId == int.Parse(userId));
+
             if (review == null)
             {
                 return NotFound();
@@ -217,13 +191,22 @@ namespace TNAI_Proj.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var review = await _context.Reviews.FindAsync(id);
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userId))
+            {
+                return RedirectToAction("Login", "Auth");
+            }
+
+            var review = await _context.Reviews
+                .FirstOrDefaultAsync(r => r.Id == id && r.UserId == int.Parse(userId));
+
             if (review != null)
             {
                 _context.Reviews.Remove(review);
                 await _context.SaveChangesAsync();
             }
-            return RedirectToAction(nameof(Index));
+
+            return RedirectToAction("Index", "Orders");
         }
 
         private bool ReviewExists(int id)

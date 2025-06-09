@@ -5,58 +5,46 @@
 }
 
 <div class="container mt-4">
-    <h2>Order Details</h2>
-    <hr />
-    @if (Model == null)
-    {
-        <div class="alert alert-danger">Order not found.</div>
-    }
-    else
-    {
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Order #@Model.Id</h5>
-                <div class="row">
-                    <div class="col-md-6">
-                        <p><strong>Car:</strong> @Model.Car?.Name</p>
-                        <p><strong>Total Amount:</strong> $@Model.TotalAmount.ToString("N2")</p>
-                        <p><strong>Status:</strong> @Model.Status</p>
-                        <p><strong>Order Date:</strong> @Model.OrderDate.ToString("g")</p>
-                        <p><strong>Payment Method:</strong> @Model.PaymentMethod</p>
-                        <p><strong>Notes:</strong> @Model.Notes</p>
+    <h1>Order Details</h1>
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Order #@Model.Id</h5>
+                    <h6 class="card-subtitle mb-3 text-muted">@Model.Car?.Name</h6>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <p><strong>Status:</strong> @Model.Status</p>
+                            <p><strong>Total Amount:</strong> $@Model.TotalAmount.ToString("N2")</p>
+                            <p><strong>Order Date:</strong> @Model.OrderDate.ToString("g")</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p><strong>Car Details:</strong></p>
+                            <ul>
+                                <li>Year: @Model.Car?.Year</li>
+                                <li>Mileage: @Model.Car?.Mileage.ToString("N0") km</li>
+                                <li>Transmission: @Model.Car?.Transmission</li>
+                                <li>Fuel Type: @Model.Car?.FuelType</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="btn-group">
+                        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+                        @if (Model.Status == "Pending")
+                        {
+                            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Update Status</a>
+                        }
+                        @if (Model.Status == "Completed")
+                        {
+                            <a asp-controller="Reviews" asp-action="Create" asp-route-carId="@Model.CarId" asp-route-orderId="@Model.Id" class="btn btn-primary">Write a Review</a>
+                            <a asp-controller="Reviews" asp-action="Index" class="btn btn-info">My Reviews</a>
+                        }
                     </div>
                 </div>
-
-                @if (User.IsInRole("Admin"))
-                {
-                    <div class="mt-4">
-                        <h6>Update Order Status</h6>
-                        <form asp-action="UpdateStatus" method="post" class="d-flex gap-2">
-                            <input type="hidden" name="id" value="@Model.Id" />
-                            <select name="status" class="form-select" style="max-width: 200px;">
-                                @{
-                                    var statuses = new[] { "Pending", "Completed", "Cancelled", "Refunded" };
-                                    foreach (var status in statuses)
-                                    {
-                                        <option value="@status" selected="@(Model.Status == status)">@status</option>
-                                    }
-                                }
-                            </select>
-                            <button type="submit" class="btn btn-primary">Update Status</button>
-                        </form>
-                    </div>
-                }
-
-                @if (Model.Status == "Completed" && Model.Car != null)
-                {
-                    <div class="mt-3">
-                        <a asp-controller="Reviews" asp-action="Create" asp-route-carId="@Model.CarId" class="btn btn-primary">Add Review</a>
-                    </div>
-                }
             </div>
         </div>
-    }
-    <div class="mt-3">
-        <a asp-action="Index" class="btn btn-secondary">Back to Orders</a>
     </div>
 </div> 

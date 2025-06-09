@@ -160,13 +160,20 @@ namespace TNAI_Proj.Controllers
             {
                 new Claim(ClaimTypes.Name, user.Name),
                 new Claim(ClaimTypes.Email, user.Email),
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                new Claim(ClaimTypes.Role, user.Role)
             };
 
             var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
             await HttpContext.SignInAsync(
                 CookieAuthenticationDefaults.AuthenticationScheme,
                 new ClaimsPrincipal(claimsIdentity));
+
+            // Redirect admin users to admin dashboard
+            if (user.Role == "Admin")
+            {
+                Response.Redirect(Url.Action("Dashboard", "Admin"));
+            }
         }
     }
 } 

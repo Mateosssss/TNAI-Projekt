@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using TNAI_Proj.Models;
 using System.Security.Claims;
+using TNAI_Proj.Data;
 
 namespace TNAI_Proj.Controllers
 {
@@ -21,11 +22,18 @@ namespace TNAI_Proj.Controllers
         public async Task<IActionResult> Index()
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userId))
+            {
+                return RedirectToAction("Login", "Auth");
+            }
+
             var orders = await _context.Orders
-                .Include(o => o.User)
                 .Include(o => o.Car)
-                .Where(o => o.UserId.ToString() == userId)
+                .Include(o => o.User)
+                .Where(o => o.UserId == int.Parse(userId))
+                .OrderByDescending(o => o.OrderDate)
                 .ToListAsync();
+
             return View(orders);
         }
 
@@ -38,10 +46,15 @@ namespace TNAI_Proj.Controllers
             }
 
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userId))
+            {
+                return RedirectToAction("Login", "Auth");
+            }
+
             var order = await _context.Orders
-                .Include(o => o.User)
                 .Include(o => o.Car)
-                .FirstOrDefaultAsync(o => o.Id == id && o.UserId.ToString() == userId);
+                .Include(o => o.User)
+                .FirstOrDefaultAsync(o => o.Id == id && o.UserId == int.Parse(userId));
 
             if (order == null)
             {
@@ -52,26 +65,16 @@ namespace TNAI_Proj.Controllers
         }
 
         // GET: Orders/Create
-        public async Task<IActionResult> Create(int carId)
+        public IActionResult Create(int carId)
         {
-            var car = await _context.Cars
-                .Include(c => c.Category)
-                .FirstOrDefaultAsync(c => c.Id == carId && c.IsAvailable);
-
-            if (car == null)
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userId))
             {
-                return NotFound();
+                return RedirectToAction("Login", "Auth");
             }
 
-            var order = new Order
-            {
-                CarId = carId,
-                TotalAmount = car.Price,
-                Status = "Pending",
-                OrderDate = DateTime.UtcNow
-            };
-
-            return View(order);
+            ViewBag.CarId = carId;
+            return View();
         }
 
         // POST: Orders/Create
@@ -90,16 +93,6 @@ namespace TNAI_Proj.Controllers
                 order.UserId = int.Parse(userId);
                 order.OrderDate = DateTime.UtcNow;
                 order.Status = "Pending";
-
-                var car = await _context.Cars.FindAsync(order.CarId);
-                if (car == null || !car.IsAvailable)
-                {
-                    ModelState.AddModelError("", "The selected car is no longer available.");
-                    return View(order);
-                }
-
-                car.IsAvailable = false;
-                _context.Update(car);
                 _context.Add(order);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -116,8 +109,13 @@ namespace TNAI_Proj.Controllers
             }
 
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrEmpty(userId))
+            {
+                return RedirectToAction("Login", "Auth");
+            }
+
             var order = await _context.Orders
-                .FirstOrDefaultAsync(o => o.Id == id && o.UserId.ToString() == userId);
+                .FirstOrDefaultAsync(o => o.Id == id && o.UserId == int.Parse(userId));
 
             if (order == null)
             {
@@ -137,17 +135,26 @@ namespace TNAI_Proj.Controllers
                 return NotFound();
             }
 
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            if (order.UserId.ToString() != userId)
-            {
-                return NotFound();
-            }
-
             if (ModelState.IsValid)
             {
                 try
                 {
-                    _context.Update(order);
+                    var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                    if (string.IsNullOrEmpty(userId))
+                    {
+                        return RedirectToAction("Login", "Auth");
+                    }
+
+                    var existingOrder = await _context.Orders
+                        .FirstOrDefaultAsync(o => o.Id == id && o.UserId == int.Parse(userId));
+
+                    if (existingOrder == null)
+                    {
+                        return NotFound();
+                    }
+
+                    existingOrder.Status = order.Status;
+
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)

@@ -20,6 +20,8 @@ public class CarsController : Controller
         var cars = await _context.Cars
             .Include(c => c.Category)
             .Include(c => c.Dealership)
+            .Include(c => c.User)
+            .OrderByDescending(c => c.CreatedAt)
             .ToListAsync();
         return View(cars);
     }

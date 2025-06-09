@@ -13,6 +13,18 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\WebDev\\TNAI-Proj\\wwwroot\\images\\cars\\honda-cr-v.jpg",
+      "PackagePath": "staticwebassets\\images\\cars\\honda-cr-v.jpg"
+    },
+    {
+      "Id": "D:\\WebDev\\TNAI-Proj\\wwwroot\\images\\cars\\porsche-911.jpg",
+      "PackagePath": "staticwebassets\\images\\cars\\porsche-911.jpg"
+    },
+    {
+      "Id": "D:\\WebDev\\TNAI-Proj\\wwwroot\\images\\cars\\toyota-camry.jpg",
+      "PackagePath": "staticwebassets\\images\\cars\\toyota-camry.jpg"
+    },
+    {
       "Id": "D:\\WebDev\\TNAI-Proj\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

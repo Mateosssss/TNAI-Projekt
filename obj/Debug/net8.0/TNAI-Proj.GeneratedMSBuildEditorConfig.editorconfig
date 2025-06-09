@@ -26,6 +26,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGFzaGJvYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/WebDev/TNAI-Proj/Views/Admin/DeleteCar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlQ2FyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebDev/TNAI-Proj/Views/Admin/DeleteUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGVsZXRlVXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/WebDev/TNAI-Proj/Views/Admin/Orders.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cT3JkZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -74,6 +82,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVhbGVyc2hpcHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/WebDev/TNAI-Proj/Views/Dealerships/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVhbGVyc2hpcHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/WebDev/TNAI-Proj/Views/Dealerships/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVhbGVyc2hpcHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -84,6 +96,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/WebDev/TNAI-Proj/Views/Orders/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebDev/TNAI-Proj/Views/Orders/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/WebDev/TNAI-Proj/Views/Orders/Index.cshtml]
@@ -98,6 +114,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3c1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/WebDev/TNAI-Proj/Views/Reviews/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3c1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebDev/TNAI-Proj/Views/Reviews/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3c1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/WebDev/TNAI-Proj/Views/Reviews/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3c1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -108,6 +132,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/WebDev/TNAI-Proj/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/WebDev/TNAI-Proj/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/WebDev/TNAI-Proj/Views/Shared/_ValidationScriptsPartial.cshtml]
