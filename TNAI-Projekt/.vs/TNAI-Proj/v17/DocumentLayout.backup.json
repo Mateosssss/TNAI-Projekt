@@ -1,0 +1,1099 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\cars\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\cars\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\cars\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\cars\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\cars\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\cars\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\controllers\\carscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:controllers\\carscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\orders\\cancel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\orders\\cancel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\orders\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\orders\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\admin\\cars.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\admin\\cars.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\cars\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\cars\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\categories\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\categories\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\orders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\orders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\orders\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\orders\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\profile\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\profile\\update.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\orders\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\orders\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\categories\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\categories\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\categories\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\categories\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\wwwroot\\images\\cars\\m4.jpg||{58961B49-13E0-48C0-9258-13CBC4D40279}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:wwwroot\\images\\cars\\m4.jpg||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\controllers\\maintenancerecordscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:controllers\\maintenancerecordscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/MSI/TnaiDb/True/SqlTable/dbo.MaintenanceRecords.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\admin\\orders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\admin\\orders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\controllers\\statisticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:controllers\\statisticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\statistics\\statistics.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\statistics\\statistics.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\admin\\reviews.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\admin\\reviews.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\admin\\users.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\admin\\users.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\auth\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\auth\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\reviews\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\reviews\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\controllers\\dealershipscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:controllers\\dealershipscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\admin\\deleteuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\admin\\deleteuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\dealerships\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\dealerships\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\reviews\\carreviews.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\reviews\\carreviews.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\dealerships\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\dealerships\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\reviews\\myreviews.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\reviews\\myreviews.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\reviews\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\reviews\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\reviews\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\reviews\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\reviews\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\reviews\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\dealerships\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\dealerships\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\views\\admin\\deletecar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:views\\admin\\deletecar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\tnai_proj.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:tnai_proj.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/MSI/TnaiDb/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|c:\\users\\ornow\\onedrive\\dokumenty\\github\\nowy folder\\tnai-projekt\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{30D99846-FC24-C0E3-FBD8-998A1C862C85}|TNAI_Proj.Web.csproj|solutionrelative:readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\TNAI-Proj.Model\\SeedData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\TNAI-Proj.Model\\ApplicationDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\TNAI-Proj.Model\\Entities\\Auth\\RegisterModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\TNAI-Proj.Repository\\BaseRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\TNAI-Proj.Model\\Migrations\\20250609131851_AddYearAndMileageToCar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\TNAI-Proj.Model\\Migrations\\ApplicationDbContextModelSnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\TNAI-Proj.Model\\Migrations\\20250609120704_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\TNAI-Proj.Repository\\TNAI_Proj.Repository.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\TNAI-Proj.Model\\Entities\\Auth\\LoginModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\TNAI-Proj.Model\\Entities\\Review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\TNAI-Proj.Model\\Entities\\MaintenanceRecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Cars\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cars\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Cars\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Cars\\Edit.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-02T07:32:40.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Cars.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Admin\\Cars.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Cars.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Admin\\Cars.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Cars.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-01T08:53:36.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Orders\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Orders\\Create.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Orders\\Create.cshtml",
+              "RelativeToolTip": "Views\\Orders\\Create.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-02T07:37:18.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Cars\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cars\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Cars\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Cars\\Delete.cshtml",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCQAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-02T07:51:18.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Cars\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cars\\Details.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Cars\\Details.cshtml",
+              "RelativeToolTip": "Views\\Cars\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-01T20:06:54.543Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAEMAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-01T08:59:30.822Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CarsController.cs",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Controllers\\CarsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CarsController.cs",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Controllers\\CarsController.cs",
+              "RelativeToolTip": "Controllers\\CarsController.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAA/wKIAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T07:51:29.601Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Cancel.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Orders\\Cancel.cshtml",
+              "RelativeDocumentMoniker": "Views\\Orders\\Cancel.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Orders\\Cancel.cshtml",
+              "RelativeToolTip": "Views\\Orders\\Cancel.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-01T11:18:41.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Cars\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Cars\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Cars\\Index.cshtml",
+              "RelativeToolTip": "Views\\Cars\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-01T14:30:08.705Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Categories\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Categories\\Details.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Categories\\Details.cshtml",
+              "RelativeToolTip": "Views\\Categories\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-01T08:57:20.062Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Orders\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Orders\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Orders\\Index.cshtml",
+              "RelativeToolTip": "Views\\Orders\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-02T07:37:19.703Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Orders\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Orders\\Details.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Orders\\Details.cshtml",
+              "RelativeToolTip": "Views\\Orders\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-02T07:52:33.313Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Update.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Profile\\Update.cshtml",
+              "RelativeDocumentMoniker": "Views\\Profile\\Update.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Profile\\Update.cshtml",
+              "RelativeToolTip": "Views\\Profile\\Update.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-01T12:04:56.458Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAiwB8AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-01T13:27:36.999Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Orders\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Orders\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Orders\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Orders\\Edit.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAABgAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-01T19:48:46.164Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Categories\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Categories\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Categories\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Categories\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-01T08:57:25.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Categories\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Categories\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Categories\\Index.cshtml",
+              "RelativeToolTip": "Views\\Categories\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-02T07:04:43.874Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-02T06:44:53.705Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "dbo.MaintenanceRecords.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/MSI/TnaiDb/True/SqlTable/dbo.MaintenanceRecords.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/MSI/TnaiDb/True/SqlTable/dbo.MaintenanceRecords.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-07-02T07:00:36.904Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "m4.jpg",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\wwwroot\\images\\cars\\m4.jpg",
+              "RelativeDocumentMoniker": "wwwroot\\images\\cars\\m4.jpg",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\wwwroot\\images\\cars\\m4.jpg",
+              "RelativeToolTip": "wwwroot\\images\\cars\\m4.jpg",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-07-02T07:31:12.841Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "MaintenanceRecordsController.cs",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Controllers\\MaintenanceRecordsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MaintenanceRecordsController.cs",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Controllers\\MaintenanceRecordsController.cs",
+              "RelativeToolTip": "Controllers\\MaintenanceRecordsController.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAswEIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T08:52:45.573Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAYwI0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T13:14:53.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Orders.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Admin\\Orders.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Orders.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Admin\\Orders.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Orders.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAACsAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-01T08:56:16.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "SeedData.cs",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\TNAI-Proj.Model\\SeedData.cs",
+              "RelativeDocumentMoniker": "..\\..\\TNAI-Proj.Model\\SeedData.cs",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\TNAI-Proj.Model\\SeedData.cs",
+              "RelativeToolTip": "..\\..\\TNAI-Proj.Model\\SeedData.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAAwEcAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T08:40:27.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\TNAI-Proj.Model\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "..\\..\\TNAI-Proj.Model\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\TNAI-Proj.Model\\ApplicationDbContext.cs",
+              "RelativeToolTip": "..\\..\\TNAI-Proj.Model\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAwA4AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T08:30:25.758Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Dashboard.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Dashboard.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-01T08:53:52.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Statistics.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Statistics\\Statistics.cshtml",
+              "RelativeDocumentMoniker": "Views\\Statistics\\Statistics.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Statistics\\Statistics.cshtml",
+              "RelativeToolTip": "Views\\Statistics\\Statistics.cshtml",
+              "ViewState": "AgIAABYAAAAAAAAAAAAowDIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-01T15:27:46.069Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "StatisticsController.cs",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Controllers\\StatisticsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\StatisticsController.cs",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Controllers\\StatisticsController.cs",
+              "RelativeToolTip": "Controllers\\StatisticsController.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAqwBwAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T15:23:54.597Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ProfileController.cs",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Controllers\\ProfileController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProfileController.cs",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Controllers\\ProfileController.cs",
+              "RelativeToolTip": "Controllers\\ProfileController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAWwCsAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T12:07:52.201Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Reviews.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Admin\\Reviews.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Reviews.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Admin\\Reviews.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Reviews.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-01T08:56:22.022Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Users.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Admin\\Users.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\Users.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Admin\\Users.cshtml",
+              "RelativeToolTip": "Views\\Admin\\Users.cshtml",
+              "ViewState": "AgIAABEAAAAAAAAAAAAkwCAAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-01T08:56:27.865Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "AccessDenied.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Auth\\AccessDenied.cshtml",
+              "RelativeDocumentMoniker": "Views\\Auth\\AccessDenied.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Auth\\AccessDenied.cshtml",
+              "RelativeToolTip": "Views\\Auth\\AccessDenied.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-01T08:56:34.982Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Reviews\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reviews\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Reviews\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Reviews\\Edit.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB8AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-01T08:59:03.98Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Auth\\Register.cshtml",
+              "RelativeDocumentMoniker": "Views\\Auth\\Register.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Auth\\Register.cshtml",
+              "RelativeToolTip": "Views\\Auth\\Register.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAADgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-01T08:56:51.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Controllers\\UsersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T08:43:35.788Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "Controllers\\OrdersController.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAgwBEBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T12:37:31.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Auth\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Auth\\Login.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Auth\\Login.cshtml",
+              "RelativeToolTip": "Views\\Auth\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-01T12:27:00.556Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Controllers\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CategoriesController.cs",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Controllers\\CategoriesController.cs",
+              "RelativeToolTip": "Controllers\\CategoriesController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T08:52:08.381Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "DealershipsController.cs",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Controllers\\DealershipsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DealershipsController.cs",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Controllers\\DealershipsController.cs",
+              "RelativeToolTip": "Controllers\\DealershipsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T13:07:56.206Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-01T08:59:42.382Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ReviewsController.cs",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Controllers\\ReviewsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ReviewsController.cs",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Controllers\\ReviewsController.cs",
+              "RelativeToolTip": "Controllers\\ReviewsController.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAYwAgAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T08:53:03.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "RegisterModel.cs",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\TNAI-Proj.Model\\Entities\\Auth\\RegisterModel.cs",
+              "RelativeDocumentMoniker": "..\\..\\TNAI-Proj.Model\\Entities\\Auth\\RegisterModel.cs",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\TNAI-Proj.Model\\Entities\\Auth\\RegisterModel.cs",
+              "RelativeToolTip": "..\\..\\TNAI-Proj.Model\\Entities\\Auth\\RegisterModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T12:22:14.84Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "BaseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\TNAI-Proj.Repository\\BaseRepository.cs",
+              "RelativeDocumentMoniker": "..\\..\\TNAI-Proj.Repository\\BaseRepository.cs",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\TNAI-Proj.Repository\\BaseRepository.cs",
+              "RelativeToolTip": "..\\..\\TNAI-Proj.Repository\\BaseRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T08:47:51.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "DeleteUser.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Admin\\DeleteUser.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\DeleteUser.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Admin\\DeleteUser.cshtml",
+              "RelativeToolTip": "Views\\Admin\\DeleteUser.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-01T08:55:54.55Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Dealerships\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Dealerships\\Details.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Dealerships\\Details.cshtml",
+              "RelativeToolTip": "Views\\Dealerships\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-01T08:57:38.414Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAUwE8AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T13:05:06.889Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T08:52:40.75Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-01T09:05:17.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "CarReviews.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Reviews\\CarReviews.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reviews\\CarReviews.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Reviews\\CarReviews.cshtml",
+              "RelativeToolTip": "Views\\Reviews\\CarReviews.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-01T08:58:44.061Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Dealerships\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Dealerships\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Dealerships\\Index.cshtml",
+              "RelativeToolTip": "Views\\Dealerships\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-01T08:57:54.094Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\Error.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-01T08:59:45.991Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-11T19:18:41.193Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "MyReviews.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Reviews\\MyReviews.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reviews\\MyReviews.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Reviews\\MyReviews.cshtml",
+              "RelativeToolTip": "Views\\Reviews\\MyReviews.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-01T08:59:25.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Reviews\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reviews\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Reviews\\Index.cshtml",
+              "RelativeToolTip": "Views\\Reviews\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-01T08:59:14.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Reviews\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reviews\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Reviews\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Reviews\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-01T08:58:57.055Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Reviews\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Reviews\\Create.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Reviews\\Create.cshtml",
+              "RelativeToolTip": "Views\\Reviews\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-01T08:58:51.422Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Dealerships\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Dealerships\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Dealerships\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Dealerships\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-01T08:57:44.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "DeleteCar.cshtml",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Admin\\DeleteCar.cshtml",
+              "RelativeDocumentMoniker": "Views\\Admin\\DeleteCar.cshtml",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\Views\\Admin\\DeleteCar.cshtml",
+              "RelativeToolTip": "Views\\Admin\\DeleteCar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-01T08:53:56.157Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "TNAI_Proj.Web.csproj",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\TNAI_Proj.Web.csproj",
+              "RelativeDocumentMoniker": "TNAI_Proj.Web.csproj",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\TNAI_Proj.Web.csproj",
+              "RelativeToolTip": "TNAI_Proj.Web.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-01T08:51:19.902Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "20250609131851_AddYearAndMileageToCar.cs",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\TNAI-Proj.Model\\Migrations\\20250609131851_AddYearAndMileageToCar.cs",
+              "RelativeDocumentMoniker": "..\\..\\TNAI-Proj.Model\\Migrations\\20250609131851_AddYearAndMileageToCar.cs",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\TNAI-Proj.Model\\Migrations\\20250609131851_AddYearAndMileageToCar.cs",
+              "RelativeToolTip": "..\\..\\TNAI-Proj.Model\\Migrations\\20250609131851_AddYearAndMileageToCar.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T08:51:17.037Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "ApplicationDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\TNAI-Proj.Model\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "..\\..\\TNAI-Proj.Model\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\TNAI-Proj.Model\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeToolTip": "..\\..\\TNAI-Proj.Model\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T08:51:13.894Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "20250609120704_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\TNAI-Proj.Model\\Migrations\\20250609120704_InitialCreate.cs",
+              "RelativeDocumentMoniker": "..\\..\\TNAI-Proj.Model\\Migrations\\20250609120704_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\TNAI-Proj.Model\\Migrations\\20250609120704_InitialCreate.cs",
+              "RelativeToolTip": "..\\..\\TNAI-Proj.Model\\Migrations\\20250609120704_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T08:39:32.533Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\Nowy folder\\TNAI-Projekt\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-06-11T19:18:40.157Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "TNAI_Proj.Repository.csproj",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\TNAI-Proj.Repository\\TNAI_Proj.Repository.csproj",
+              "RelativeDocumentMoniker": "..\\..\\TNAI-Proj.Repository\\TNAI_Proj.Repository.csproj",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\TNAI-Proj.Repository\\TNAI_Proj.Repository.csproj",
+              "RelativeToolTip": "..\\..\\TNAI-Proj.Repository\\TNAI_Proj.Repository.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-01T08:41:55.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "LoginModel.cs",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\TNAI-Proj.Model\\Entities\\Auth\\LoginModel.cs",
+              "RelativeDocumentMoniker": "..\\..\\TNAI-Proj.Model\\Entities\\Auth\\LoginModel.cs",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\TNAI-Proj.Model\\Entities\\Auth\\LoginModel.cs",
+              "RelativeToolTip": "..\\..\\TNAI-Proj.Model\\Entities\\Auth\\LoginModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T08:38:57.31Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "Review.cs",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\TNAI-Proj.Model\\Entities\\Review.cs",
+              "RelativeDocumentMoniker": "..\\..\\TNAI-Proj.Model\\Entities\\Review.cs",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\TNAI-Proj.Model\\Entities\\Review.cs",
+              "RelativeToolTip": "..\\..\\TNAI-Proj.Model\\Entities\\Review.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T08:38:45.429Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "MaintenanceRecord.cs",
+              "DocumentMoniker": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\TNAI-Proj.Model\\Entities\\MaintenanceRecord.cs",
+              "RelativeDocumentMoniker": "..\\..\\TNAI-Proj.Model\\Entities\\MaintenanceRecord.cs",
+              "ToolTip": "C:\\Users\\ornow\\OneDrive\\Dokumenty\\GitHub\\TNAI-Proj.Model\\Entities\\MaintenanceRecord.cs",
+              "RelativeToolTip": "..\\..\\TNAI-Proj.Model\\Entities\\MaintenanceRecord.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T08:38:41.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "dbo.Users.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/MSI/TnaiDb/True/SqlTable/dbo.Users.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/MSI/TnaiDb/True/SqlTable/dbo.Users.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-06-11T19:32:36.528Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 93,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

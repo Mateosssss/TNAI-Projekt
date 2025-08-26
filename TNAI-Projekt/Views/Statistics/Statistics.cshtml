@@ -1,0 +1,50 @@
+@{
+    ViewData["Title"] = "Statistics";
+}
+
+<!-- Upewnij siê, ¿e Chart.js jest za³adowany -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<div class="container mt-4">
+    <h1 class="mb-4">Statistics</h1>
+
+    <canvas id="myChart" width="400" height="200"></canvas>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const ctx = document.getElementById('myChart').getContext('2d');
+
+            new Chart(ctx, {
+                type: 'bar', // mo¿esz zmieniæ na 'line', 'pie', 'doughnut', itd.
+                data: {
+                    labels: ['Styczeñ', 'Luty', 'Marzec'],
+                    datasets: [{
+                        label: 'Przychody',
+                        data: [1200, 1900, 3000],
+                        backgroundColor: [
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+}

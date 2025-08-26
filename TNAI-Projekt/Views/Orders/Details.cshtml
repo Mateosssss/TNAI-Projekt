@@ -1,0 +1,54 @@
+@model TNAI_Proj.Model.Entities.Order
+
+@{
+    ViewData["Title"] = "Order Details";
+}
+
+<div class="">
+    <h1>Order Details</h1>
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Order #@Model.Id</h5>
+                    <h6 class="card-subtitle mb-3 text-muted">@Model.Car?.Name</h6>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <p><strong>Status:</strong> @Model.Status</p>
+                            <p><strong>Total Amount:</strong> $@Model.TotalAmount.ToString("N2")</p>
+                            <p><strong>Order Date:</strong> @Model.OrderDate.ToString("g")</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p><strong>Car Details:</strong></p>
+                            <ul>
+                                <li>Year: @Model.Car?.Year</li>
+                                <li>Mileage: @Model.Car?.Mileage.ToString("N0") km</li>
+                                <li>Transmission: @Model.Car?.Transmission</li>
+                                <li>Fuel Type: @Model.Car?.FuelType</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="btn-group">
+                        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Update Status</a>
+                        }
+                        @if (Model.Status == "Pending")
+                        {
+                            <a asp-controller="Orders" asp-action="Cancel" asp-route-id="@Model.Id" class="btn btn-danger">Cancel Order</a>
+                        }
+                        @if (Model.Status == "Completed")
+                        {
+                            <a asp-controller="Reviews" asp-action="Create" asp-route-carId="@Model.CarId" asp-route-orderId="@Model.Id" class="btn btn-primary">Write a Review</a>
+                            <a asp-controller="Reviews" asp-action="Index" class="btn btn-info">My Reviews</a>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

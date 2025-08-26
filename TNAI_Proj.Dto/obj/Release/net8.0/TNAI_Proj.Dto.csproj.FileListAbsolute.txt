@@ -1,0 +1,11 @@
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI_Proj.Dto\bin\Release\net8.0\TNAI_Proj.Dto.deps.json
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI_Proj.Dto\bin\Release\net8.0\TNAI_Proj.Dto.dll
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI_Proj.Dto\bin\Release\net8.0\TNAI_Proj.Dto.pdb
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI_Proj.Dto\obj\Release\net8.0\TNAI_Proj.Dto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI_Proj.Dto\obj\Release\net8.0\TNAI_Proj.Dto.AssemblyInfoInputs.cache
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI_Proj.Dto\obj\Release\net8.0\TNAI_Proj.Dto.AssemblyInfo.cs
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI_Proj.Dto\obj\Release\net8.0\TNAI_Proj.Dto.csproj.CoreCompileInputs.cache
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI_Proj.Dto\obj\Release\net8.0\TNAI_Proj.Dto.dll
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI_Proj.Dto\obj\Release\net8.0\refint\TNAI_Proj.Dto.dll
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI_Proj.Dto\obj\Release\net8.0\TNAI_Proj.Dto.pdb
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI_Proj.Dto\obj\Release\net8.0\ref\TNAI_Proj.Dto.dll

@@ -1,0 +1,33 @@
+@model IEnumerable<TNAI_Proj.Model.Entities.Dealership>
+
+@{
+    ViewData["Title"] = "Dealerships";
+}
+
+<div class="container">
+    <h1 class="mb-4">Our Dealerships</h1>
+
+    <div class="row">
+        @foreach (var dealership in Model)
+        {
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">@dealership.Name</h5>
+                        <ul class="list-unstyled">
+                            <li><strong>Address:</strong> @dealership.Address</li>
+                            <li><strong>Phone:</strong> @dealership.PhoneNumber</li>
+                            <li><strong>Email:</strong> @dealership.Email</li>
+                            <li><strong>Manager:</strong> @dealership.ManagerName</li>
+                            <li><strong>Operating Hours:</strong> @dealership.OperatingHours</li>
+                            <li><strong>Status:</strong> @(dealership.IsActive ? "Active" : "Inactive")</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a asp-action="Details" asp-route-id="@dealership.Id" class="btn btn-primary">View Inventory</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div> 

@@ -1,0 +1,27 @@
+@model TNAI_Proj.Model.Entities.Order
+
+@{
+    ViewData["Title"] = "Confirm order cancellation";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Confirm order cancellation #@Model.Id</h5>
+                    <h6> Are you sure you want to cancel the order?</h6>
+
+                    <div class="form-group">
+                        <a asp-action="CancelConfirmed" asp-route-id="@Model.Id" class="btn btn-primary">Yes</a>
+                        <a asp-action="Details" asp-route-id="@Model.Id" class="btn btn-danger">No</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+} 

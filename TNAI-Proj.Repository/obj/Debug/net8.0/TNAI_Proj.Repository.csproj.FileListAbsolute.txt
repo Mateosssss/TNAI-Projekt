@@ -1,0 +1,17 @@
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI-Proj.Repository\bin\Debug\net8.0\TNAI_Proj.Repository.deps.json
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI-Proj.Repository\bin\Debug\net8.0\TNAI_Proj.Repository.runtimeconfig.json
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI-Proj.Repository\bin\Debug\net8.0\TNAI_Proj.Repository.dll
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI-Proj.Repository\bin\Debug\net8.0\TNAI_Proj.Repository.pdb
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI-Proj.Repository\bin\Debug\net8.0\TNAI_Proj.Model.dll
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI-Proj.Repository\bin\Debug\net8.0\TNAI_Proj.Model.pdb
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI-Proj.Repository\obj\Debug\net8.0\TNAI_Proj.Repository.csproj.AssemblyReference.cache
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI-Proj.Repository\obj\Debug\net8.0\TNAI_Proj.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI-Proj.Repository\obj\Debug\net8.0\TNAI_Proj.Repository.AssemblyInfoInputs.cache
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI-Proj.Repository\obj\Debug\net8.0\TNAI_Proj.Repository.AssemblyInfo.cs
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI-Proj.Repository\obj\Debug\net8.0\TNAI_Proj.Repository.csproj.CoreCompileInputs.cache
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI-Proj.Repository\obj\Debug\net8.0\TNAI_Pro.04CDAB29.Up2Date
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI-Proj.Repository\obj\Debug\net8.0\TNAI_Proj.Repository.dll
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI-Proj.Repository\obj\Debug\net8.0\refint\TNAI_Proj.Repository.dll
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI-Proj.Repository\obj\Debug\net8.0\TNAI_Proj.Repository.pdb
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI-Proj.Repository\obj\Debug\net8.0\TNAI_Proj.Repository.genruntimeconfig.cache
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI-Proj.Repository\obj\Debug\net8.0\ref\TNAI_Proj.Repository.dll

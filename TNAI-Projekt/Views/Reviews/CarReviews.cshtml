@@ -1,0 +1,63 @@
+@model TNAI_Proj.Model.Entities.Car
+
+@{
+    ViewData["Title"] = $"{Model.Name} - Reviews";
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>@Model.Name - Reviews</h2>
+        <a asp-controller="Cars" asp-action="Details" asp-route-id="@Model.Id" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Back to Car Details
+        </a>
+    </div>
+    <hr />
+    @if (!Model.Reviews.Any())
+    {
+        <div class="alert alert-info">No reviews yet for this car.</div>
+    }
+    else
+    {
+        <div class="row">
+            @foreach (var review in Model.Reviews)
+            {
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h5 class="card-title mb-0">@review.User?.Name</h5>
+                                <div class="text-warning">
+                                    @for (int i = 1; i <= 5; i++)
+                                    {
+                                        if (i <= review.Rating)
+                                        {
+                                            <i class="fas fa-star"></i>
+                                        }
+                                        else
+                                        {
+                                            <i class="far fa-star"></i>
+                                        }
+                                    }
+                                </div>
+                            </div>
+                            <p class="card-text">@review.Comment</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">Posted on @review.CreatedAt.ToString("g")</small>
+                                @if (User.Identity.IsAuthenticated && review.UserId == int.Parse(User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value))
+                                {
+                                    <div>
+                                        <a asp-action="Edit" asp-route-id="@review.Id" class="btn btn-sm btn-primary">Edit</a>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+} 

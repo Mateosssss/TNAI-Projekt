@@ -1,0 +1,193 @@
+@model TNAI_Proj.Model.Entities.Car
+
+@{
+    ViewData["Title"] = "Car Details";
+}
+
+<div class="container mt-4">
+    <div class="row">
+
+        <div class="col-md-6">
+            @if (Model != null && !string.IsNullOrEmpty(Model?.ImagePath))
+            {
+                <img src="@Model.ImagePath" class="img-fluid rounded" alt="@Model.Name" />
+            }
+            else
+            {
+                <img src="~/images/default-car.jpg" class="img-fluid rounded" alt="Default Car Image" />
+            }
+        </div>
+
+        <div class="col-md-6">
+            <form asp-action="@(Model == null ? "Create" : "Edit")" method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"  ></div>
+
+
+                <div class="form-check">
+                    <input asp-for="IsAvailable" class="form-check-input" style="transform: scale(1.5);" />
+                    <label asp-for="IsAvailable" class="form-check-label fs-5 ms-2"></label>
+                </div>
+                <span asp-validation-for="IsAvailable" class="text-danger"></span>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Description" class="control-label"></label>
+                    <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+
+                <div class="form-group row mb-3">
+                    <div class="col-md-4">
+                        <label asp-for="Price" class="control-label"></label>
+                        <input asp-for="Price" class="form-control" />
+                        <span asp-validation-for="Price" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label asp-for="Year" class="control-label"></label>
+                        <input asp-for="Year" class="form-control" />
+                        <span asp-validation-for="Year" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="Mileage" class="control-label">Mileage (km)</label>
+                        <input asp-for="Mileage" class="form-control" />
+                        <span asp-validation-for="Mileage" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row mb-3">
+                    <div class="col-md-4">
+                        <label asp-for="Horsepower" class="control-label"></label>
+                        <input asp-for="Horsepower" class="form-control" />
+                        <span asp-validation-for="Horsepower" class="text-danger"></span>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <label asp-for="Torque" class="control-label"></label>
+                        <input asp-for="Torque" class="form-control" />
+                        <span asp-validation-for="Torque" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="control-label" for="TopSpeed">Top Speed (km/h)</label>
+                        <input asp-for="TopSpeed" class="form-control" />
+                        <span asp-validation-for="TopSpeed" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row mb-3">
+                    <div class="col-md-4">
+                        <label for="Acceleration" class="control-label">Acceleration (s)</label>
+                        <input asp-for="Acceleration" class="form-control" />
+                        <span asp-validation-for="Acceleration" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="FuelEfficiency" class="control-label">Fuel Efficiency</label>
+                        <input asp-for="FuelEfficiency" class="form-control" />
+                        <span asp-validation-for="FuelEfficiency" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label asp-for="Transmission" class="control-label"></label>
+                        <select asp-for="Transmission" class="form-control">
+                            <option value="Automatic">Automatic</option>
+                            <option value="Manual">Manual</option>
+                            <option value="Hybrid">Hybrid</option>
+                            <option value="Electric">Electric</option>
+                        </select>
+                        <span asp-validation-for="Transmission" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group row mb-3">
+
+                    <div class="col-md-4">
+                        <label for="FuelType" class="control-label">Fuel Type</label>
+                        <select asp-for="FuelType" class="form-control">
+                            <option value="Gasoline">Gasoline</option>
+                            <option value="Petrol">Petrol</option>
+                            <option value="Hybrid">Hybrid</option>
+                            <option value="Electric">Electric</option>
+                        </select>
+                        <span asp-validation-for="FuelType" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label asp-for="DealershipId" class="control-label"></label>
+                        <select asp-for="DealershipId" class="form-control" asp-items="ViewBag.Dealerships">
+                            <option value="">-Select Dealership-</option>
+                        </select>
+                        <span asp-validation-for="DealershipId" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <label asp-for="CategoryId" class="control-label"></label>
+                        <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.Categories">
+                            <option value="">-Select category-</option>
+                        </select>
+                        <span asp-validation-for="CategoryId" class="text-danger"></span>
+                    </div>
+
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="ImageFile">Upload Image</label>
+                    <input type="file" class="form-control" name="ImageFile" />
+                </div>
+
+
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-primary">
+                        @(Model == null ? "Create" : "Update")
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    @if (Model != null && Model.MaintenanceRecords != null && Model.MaintenanceRecords.Any())
+    {
+        <div class="row mt-4">
+            <div class="col-12">
+                <h2>Maintenance History</h2>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Service Type</th>
+                                <th>Date</th>
+                                <th>Mileage</th>
+                                <th>Cost</th>
+                                <th>Service Provider</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var record in Model.MaintenanceRecords)
+                            {
+                                <tr>
+                                    <td>@record.ServiceType</td>
+                                    <td>@record.MaintenanceDate.ToShortDateString()</td>
+                                    <td>@record.Mileage</td>
+                                    <td>$@record.Cost.ToString("N2")</td>
+                                    <td>@record.ServiceProvider</td>
+                                    <td>@record.Notes</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+} 

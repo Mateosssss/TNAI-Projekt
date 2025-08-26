@@ -1,0 +1,57 @@
+@model TNAI_Proj.Model.Entities.Category
+
+@{
+    ViewData["Title"] = "Category Details";
+}
+
+<div class="container mt-4">
+    <h1>@Model.Name</h1>
+    <hr />
+
+    <div class="row">
+        <div class="col-md-6">
+            <dl class="row">
+                <dt class="col-sm-4">Description</dt>
+                <dd class="col-sm-8">@Model.Description</dd>
+
+                <dt class="col-sm-4">Display Order</dt>
+                <dd class="col-sm-8">@Model.DisplayOrder</dd>
+            </dl>
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <h2>Cars in this Category</h2>
+        <div class="row">
+            @foreach (var car in Model.Cars)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        @if (!string.IsNullOrEmpty(car.ImagePath))
+                        {
+                            <img src="@car.ImagePath" class="card-img-top" alt="@car.Name">
+                        }
+                        <div class="card-body">
+                            <h5 class="card-title">@car.Name</h5>
+                            <p class="card-text">@car.Description</p>
+                            <p class="card-text">
+                                <strong>Price:</strong> $@car.Price.ToString("N2")<br />
+                                <strong>Year:</strong> @car.Year<br />
+                                <strong>Mileage:</strong> @car.Mileage.ToString("N0") km
+                            </p>
+                            <a asp-controller="Cars" asp-action="Details" asp-route-id="@car.Id" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="mt-4">
+        @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+        {
+            <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+        }
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </div>
+</div> 
