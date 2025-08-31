@@ -26,3 +26,18 @@ C:\Users\ornow\OneDrive\Dokumenty\GitHub\Nowy folder\TNAI-Proj.Model\obj\Debug\n
 C:\Users\ornow\OneDrive\Dokumenty\GitHub\Nowy folder\TNAI-Proj.Model\obj\Debug\net8.0\TNAI_Proj.Model.pdb
 C:\Users\ornow\OneDrive\Dokumenty\GitHub\Nowy folder\TNAI-Proj.Model\obj\Debug\net8.0\TNAI_Proj.Model.genruntimeconfig.cache
 C:\Users\ornow\OneDrive\Dokumenty\GitHub\Nowy folder\TNAI-Proj.Model\obj\Debug\net8.0\ref\TNAI_Proj.Model.dll
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI-Projekt\TNAI-Proj.Model\bin\Debug\net8.0\TNAI_Proj.Model.deps.json
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI-Projekt\TNAI-Proj.Model\bin\Debug\net8.0\TNAI_Proj.Model.runtimeconfig.json
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI-Projekt\TNAI-Proj.Model\bin\Debug\net8.0\TNAI_Proj.Model.dll
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI-Projekt\TNAI-Proj.Model\bin\Debug\net8.0\TNAI_Proj.Model.pdb
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI-Projekt\TNAI-Proj.Model\obj\Debug\net8.0\TNAI_Proj.Model.csproj.AssemblyReference.cache
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI-Projekt\TNAI-Proj.Model\obj\Debug\net8.0\TNAI_Proj.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI-Projekt\TNAI-Proj.Model\obj\Debug\net8.0\TNAI_Proj.Model.AssemblyInfoInputs.cache
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI-Projekt\TNAI-Proj.Model\obj\Debug\net8.0\TNAI_Proj.Model.AssemblyInfo.cs
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI-Projekt\TNAI-Proj.Model\obj\Debug\net8.0\TNAI_Proj.Model.csproj.CoreCompileInputs.cache
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI-Projekt\TNAI-Proj.Model\obj\Debug\net8.0\TNAI_Proj.Model.sourcelink.json
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI-Projekt\TNAI-Proj.Model\obj\Debug\net8.0\TNAI_Proj.Model.dll
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI-Projekt\TNAI-Proj.Model\obj\Debug\net8.0\refint\TNAI_Proj.Model.dll
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI-Projekt\TNAI-Proj.Model\obj\Debug\net8.0\TNAI_Proj.Model.pdb
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI-Projekt\TNAI-Proj.Model\obj\Debug\net8.0\TNAI_Proj.Model.genruntimeconfig.cache
+C:\Users\ornow\OneDrive\Dokumenty\GitHub\TNAI-Projekt\TNAI-Proj.Model\obj\Debug\net8.0\ref\TNAI_Proj.Model.dll

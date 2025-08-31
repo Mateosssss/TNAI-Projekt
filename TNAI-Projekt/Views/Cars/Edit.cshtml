@@ -151,12 +151,25 @@
         </div>
     </div>
 
-    @if (Model != null && Model.MaintenanceRecords != null && Model.MaintenanceRecords.Any())
-    {
+    
+        @if (Model != null)
+        {
         <div class="row mt-4">
             <div class="col-12">
-                <h2>Maintenance History</h2>
-                <div class="table-responsive">
+
+
+                <div class="mb-3">
+                    <h2>Maintenance History</h2>
+                    <a asp-controller="MaintenanceRecords" asp-action="Create" asp-route-carId=@Model.Id class="btn btn-primary">
+                        <i class="fas fa-plus me-2"></i>Add maintenance
+                    </a>
+                </div>
+
+                    <div class="table-responsive">
+
+
+                    @if (Model.MaintenanceRecords != null && Model.MaintenanceRecords.Any())
+                    {
                     <table class="table table-striped">
                         <thead>
                             <tr>
@@ -166,9 +179,12 @@
                                 <th>Cost</th>
                                 <th>Service Provider</th>
                                 <th>Notes</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
                             </tr>
                         </thead>
                         <tbody>
+
                             @foreach (var record in Model.MaintenanceRecords)
                             {
                                 <tr>
@@ -178,14 +194,29 @@
                                     <td>$@record.Cost.ToString("N2")</td>
                                     <td>@record.ServiceProvider</td>
                                     <td>@record.Notes</td>
+                                    <td>
+                                            <a asp-controller="MaintenanceRecords" asp-action="Edit" asp-route-id="@record.Id" class="btn btn-outline-warning">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                    </td>
+                                    <td>
+                                            <a asp-controller="MaintenanceRecords" asp-action="Delete" asp-route-id="@record.Id" class="btn btn-outline-danger">
+                                            <i class="fas fa-trash"></i>
+                                        </a>
+                                    </td>
                                 </tr>
                             }
                         </tbody>
                     </table>
-                </div>
+                    }
+                    else
+                    {
+                    <h4 class="bg-light text-muted p-3">The maintenance history is empty.</h4>
+                    }
+            </div>
             </div>
         </div>
-    }
+        }
 </div>
 
 @section Scripts {

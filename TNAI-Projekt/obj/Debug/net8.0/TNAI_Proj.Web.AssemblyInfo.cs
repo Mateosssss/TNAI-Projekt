@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TNAI_Proj.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a014825508228af43a9b4631c1bb3ebe4bb9d43")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fd0b0e13e6f33a5b1b895a9437eaec9eb394e18f")]
 [assembly: System.Reflection.AssemblyProductAttribute("TNAI_Proj.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TNAI_Proj.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

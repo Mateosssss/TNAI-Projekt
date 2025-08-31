@@ -6,7 +6,6 @@ using TNAI_Proj.Model.Entities;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using TNAI_Proj.Dto.Profile;
 
 
 namespace TNAI_Proj.Controllers

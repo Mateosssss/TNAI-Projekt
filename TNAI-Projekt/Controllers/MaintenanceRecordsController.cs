@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using TNAI_Proj.Model.Entities;
@@ -16,12 +18,11 @@ namespace TNAI_Proj.Controllers
             _context = context;
         }
 
-        // GET: MaintenanceRecords
-        public async Task<IActionResult> Index()
+       // GET: MaintenanceRecords
+        public async Task<IActionResult> Index(int carIndex)
         {
             var maintenanceRecords = await _context.MaintenanceRecords
-                .Include(m => m.Car)
-                .ToListAsync();
+                .Include(m => m.Car).Where(c => c.CarId == carIndex).ToListAsync();
             return View(maintenanceRecords);
         }
 
@@ -46,54 +47,51 @@ namespace TNAI_Proj.Controllers
         }
 
         // GET: MaintenanceRecords/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create(int carId)
         {
-            ViewBag.Cars = _context.Cars.ToList();
-            return View();
+            ViewBag.carID = carId;
+            Debug.Write(carId.ToString());
+            return View("Edit", null);
         }
 
         // POST: MaintenanceRecords/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(MaintenanceRecord maintenanceRecord)
+        public async Task<IActionResult> Create(MaintenanceRecord maintenanceRecord, int carId)
         {
             if (ModelState.IsValid)
             {
+                maintenanceRecord.CarId = carId;
                 _context.Add(maintenanceRecord);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Edit", "Cars", new { id = carId });
             }
-            ViewBag.Cars = _context.Cars.ToList();
-            return View(maintenanceRecord);
+            ViewBag.carID = carId;
+            return View("Edit",null);
         }
 
         // GET: MaintenanceRecords/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null)
+            MaintenanceRecord? record = null;
+            if (id != null)
             {
-                return NotFound();
+                record = await _context.MaintenanceRecords.SingleOrDefaultAsync(x => x.Id == id);
+                if (record != null) ViewBag.carID = record.CarId;
             }
-
-            var maintenanceRecord = await _context.MaintenanceRecords.FindAsync(id);
-            if (maintenanceRecord == null)
-            {
-                return NotFound();
-            }
-            ViewBag.Cars = _context.Cars.ToList();
-            return View(maintenanceRecord);
+            return View(record);
         }
 
-        // POST: MaintenanceRecords/Edit/5
+        //  POST: MaintenanceRecords/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, MaintenanceRecord maintenanceRecord)
+        public async Task<IActionResult> Edit(MaintenanceRecord maintenanceRecord, int carId)
         {
-            if (id != maintenanceRecord.Id)
-            {
-                return NotFound();
-            }
 
+            var record = await _context.MaintenanceRecords.AsNoTracking().SingleOrDefaultAsync(x => x.Id == maintenanceRecord.Id);
+            if (record == null) return NotFound();
+
+            maintenanceRecord.CarId = carId;
             if (ModelState.IsValid)
             {
                 try
@@ -112,13 +110,12 @@ namespace TNAI_Proj.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Edit", "Cars", new { id = carId });
             }
-            ViewBag.Cars = _context.Cars.ToList();
             return View(maintenanceRecord);
         }
 
-        // GET: MaintenanceRecords/Delete/5
+      //  GET: MaintenanceRecords/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)

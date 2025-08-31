@@ -1,0 +1,71 @@
+@model TNAI_Proj.Model.Entities.MaintenanceRecord
+
+@{
+    ViewData["Title"] = "Maintenance Record Details";
+}
+
+<div class="container mt-4">
+    <div class="row">
+
+        <div class="col-md-6">
+            <form asp-action="@(Model == null ? "Create" : "Edit")" method="post" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                 <input type="hidden" name="carId" value="@ViewBag.carID" /> 
+
+
+                <div class="form-group mb-3">
+                    <label asp-for="ServiceType" class="control-label"></label>
+                    <input asp-for="ServiceType" class="form-control" />
+                    <span asp-validation-for="ServiceType" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Description" class="control-label"></label>
+                    <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="MaintenanceDate" class="control-label"></label>
+                    <input asp-for="MaintenanceDate" class="form-control" rows="3"></input>
+                    <span asp-validation-for="MaintenanceDate" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Cost" class="control-label"></label>
+                    <input asp-for="Cost" class="form-control" rows="3"></input>
+                    <span asp-validation-for="Cost" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Mileage" class="control-label"></label>
+                    <input asp-for="Mileage" class="form-control" rows="3"></input>
+                    <span asp-validation-for="Mileage" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="ServiceProvider" class="control-label"></label>
+                    <input asp-for="ServiceProvider" class="form-control" rows="3"></input>
+                    <span asp-validation-for="ServiceProvider" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Notes" class="control-label"></label>
+                    <textarea asp-for="Notes" class="form-control" rows="3"></textarea>
+                    <span asp-validation-for="Notes" class="text-danger"></span>
+                </div>
+
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-primary">
+                        @(Model == null ? "Create" : "Update")
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+}

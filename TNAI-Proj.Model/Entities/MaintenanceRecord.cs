@@ -13,6 +13,7 @@ public class MaintenanceRecord
     public Car? Car { get; set; }
 
     [Required]
+    [DisplayFormat(DataFormatString = "{0:yyyy-MM-ddTHH:mm}", ApplyFormatInEditMode = true)]
     public DateTime MaintenanceDate { get; set; }
 
     [Required]

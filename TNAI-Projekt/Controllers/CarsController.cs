@@ -89,7 +89,7 @@ public class CarsController : Controller
     public async Task<IActionResult> Edit(int? id)
     {
         Car? car = null;
-        if (id != null)  car = await _context.Cars.Include(x => x.MaintenanceRecords).SingleOrDefaultAsync(x => x.Id == id);
+        if (id != null)  car = await _context.Cars.Include(x => x.MaintenanceRecords.OrderByDescending(x => x.MaintenanceDate)).SingleOrDefaultAsync(x => x.Id == id);
         ViewBag.Categories = new SelectList(_context.Categories.ToList(), "Id", "Name");
         ViewBag.Dealerships = new SelectList(_context.Dealerships.ToList(), "Id", "Name");
         return View(car);
