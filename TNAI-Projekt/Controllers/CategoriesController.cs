@@ -48,7 +48,7 @@ namespace TNAI_Proj.Controllers
         // GET: Categories/Create
         public IActionResult Create()
         {
-            return View();
+            return View("Edit",null);
         }
 
         // POST: Categories/Create
@@ -62,22 +62,14 @@ namespace TNAI_Proj.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(category);
+            return View("Edit",null);
         }
 
         // GET: Categories/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var category = await _context.Categories.FindAsync(id);
-            if (category == null)
-            {
-                return NotFound();
-            }
+            Category category = null;
+            if(id != null) category = await _context.Categories.FindAsync(id);
             return View(category);
         }
 
@@ -134,7 +126,7 @@ namespace TNAI_Proj.Controllers
         }
 
         // POST: Categories/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {

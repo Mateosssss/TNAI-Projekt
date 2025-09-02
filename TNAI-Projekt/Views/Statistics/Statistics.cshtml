@@ -1,37 +1,97 @@
+@model Statistics
 @{
     ViewData["Title"] = "Statistics";
 }
 
-<!-- Upewnij siê, ¿e Chart.js jest za³adowany -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <div class="container mt-4">
-    <h1 class="mb-4">Statistics</h1>
+    <h1 class="mb-4">Last @Model.range days statistics</h1>
+    <div class="btn-group mb-3"" role="group" aria-label="Date range">
+        <a asp-action="Statistics" asp-route-range="7"
+           class="btn @(Model.range == 7 ? "btn-secondary disabled me-2" : "btn-primary me-2")">
+            Last 7 days
+        </a>
+        <a asp-action="Statistics" asp-route-range="30"
+           class="btn @(Model.range == 30 ? "btn-secondary disabled me-2" : "btn-primary me-2")">
+            Last 30 days
+        </a>
+        <a asp-action="Statistics" asp-route-range="90"
+           class="btn @(Model.range == 90 ? "btn-secondary disabled me-2" : "btn-primary me-2")">
+            Last 90 days
+        </a>
+        <a asp-action="Statistics" asp-route-range="365"
+           class="btn @(Model.range == 365 ? "btn-secondary disabled" : "btn-primary")">
+            Last 365 days
+        </a>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="card-title">New Users</h2>
+                    <h2 class="card-title">@Model.newUsers</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="card-title">New Orders</h2>
+                    <h2 class="card-title">@Model.newOrders</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="card-title">New Cars</h2>
+                    <h2 class="card-title">@Model.newCars</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h2 class="card-title">New Reviews</h2>
+                    <h2 class="card-title">@Model.newReviews</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="mb-4">Orders</h1>
 
     <canvas id="myChart" width="400" height="200"></canvas>
 </div>
 
+
 @section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const ctx = document.getElementById('myChart').getContext('2d');
 
             new Chart(ctx, {
-                type: 'bar', // mo¿esz zmieniæ na 'line', 'pie', 'doughnut', itd.
+                type: 'bar',
                 data: {
-                    labels: ['Styczeñ', 'Luty', 'Marzec'],
+                    labels: @Html.Raw(System.Text.Json.JsonSerializer.Serialize(ViewBag.Labels)),
                     datasets: [{
-                        label: 'Przychody',
-                        data: [1200, 1900, 3000],
-                        backgroundColor: [
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
+                        label: 'New orders',
+                        data: @Html.Raw(System.Text.Json.JsonSerializer.Serialize(ViewBag.Values)),
+                               backgroundColor: [
+                            'rgba(54, 162, 235, 0.2)',  
+                            'rgba(0, 123, 255, 0.2)',   
+                            'rgba(0, 82, 204, 0.2)'    
                         ],
                         borderColor: [
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(0, 123, 255, 1)',
+                            'rgba(0, 82, 204, 1)'
                         ],
                         borderWidth: 1
                     }]
@@ -43,8 +103,11 @@
                             beginAtZero: true
                         }
                     }
+                  
                 }
             });
         });
     </script>
 }
+
+

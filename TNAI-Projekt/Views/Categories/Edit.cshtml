@@ -9,9 +9,8 @@
 
     <div class="row">
         <div class="col-md-6">
-            <form asp-action="Edit">
+            <form asp-action="@(Model == null ? "Create" : "Edit")">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <input type="hidden" asp-for="Id" />
                 
                 <div class="form-group mb-3">
                     <label asp-for="Name" class="control-label"></label>
@@ -26,7 +25,7 @@
                 </div>
 
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="submit" class="btn btn-primary">@(Model == null ? "Create" : "Update")</button>
                     <a asp-action="Index" class="btn btn-secondary">Back to List</a>
                 </div>
             </form>

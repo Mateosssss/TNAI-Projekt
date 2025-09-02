@@ -42,7 +42,7 @@ public class ApplicationDbContext : DbContext
             entity.HasOne(e => e.Category)
                 .WithMany(c => c.Cars)
                 .HasForeignKey(e => e.CategoryId)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.SetNull);
 
             entity.HasOne(e => e.User)
                 .WithMany(u => u.BoughtCars)

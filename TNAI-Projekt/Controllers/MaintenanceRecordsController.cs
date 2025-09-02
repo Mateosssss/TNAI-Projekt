@@ -135,7 +135,7 @@ namespace TNAI_Proj.Controllers
         }
 
         // POST: MaintenanceRecords/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
@@ -145,7 +145,7 @@ namespace TNAI_Proj.Controllers
                 _context.MaintenanceRecords.Remove(maintenanceRecord);
                 await _context.SaveChangesAsync();
             }
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Edit", "Cars", new { id = maintenanceRecord.CarId });
         }
 
         private bool MaintenanceRecordExists(int id)

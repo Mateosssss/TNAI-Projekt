@@ -1,0 +1,42 @@
+@model TNAI_Proj.Model.Entities.MaintenanceRecord
+
+@{
+    ViewData["Title"] = "Confirmation";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-6">
+
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Maintenance Record</h5>
+                    <div class="col-md-7">
+                        <p><strong>@Model?.ServiceType</strong></p>
+                        <p><strong>Cost:</strong> @Model.Cost</p>
+                        <p><strong>Maintenance Date:</strong> @Model.MaintenanceDate</p>
+                        <p><strong>Service Provider:</strong> @Model.ServiceProvider</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Are you sure you want to delete the record?</h5>
+
+                    <form asp-action="DeleteConfirmed" asp-route-id="@Model.Id" method="post">
+                        <button type="submit" class="btn btn-primary">Yes</button>
+                        <a asp-controller="Cars" asp-action="Edit" asp-route-id="@Model.CarId" class="btn btn-danger">No</a>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

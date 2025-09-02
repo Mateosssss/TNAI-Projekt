@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TNAI_Proj.Repository")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a014825508228af43a9b4631c1bb3ebe4bb9d43")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+27a77c669def7460e542ea9dd38116ce2d2486a8")]
 [assembly: System.Reflection.AssemblyProductAttribute("TNAI_Proj.Repository")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TNAI_Proj.Repository")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
